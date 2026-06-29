@@ -1,0 +1,441 @@
+[
+  {
+    "id": "proj_smartdesk",
+    "slug": "smartdesk-ai",
+    "title": "SmartDesk AI",
+    "shortDescription": "AI-powered ITSM platform that resolves tier-1 tickets autonomously.",
+    "fullDescription": "SmartDesk AI is an enterprise-grade IT service management platform that uses LLMs and retrieval-augmented generation to resolve tier-1 tickets without human intervention. Built for a banking environment where speed and auditability both matter.\n\nThe system ingests historical ticket data, runbooks, and knowledge base articles into a vector store. When a new ticket arrives, an agent classifies it, retrieves the most relevant runbook, drafts a response, and either auto-resolves or escalates to a human with full context. Every action is logged for audit.\n\nI designed the architecture end-to-end: the Next.js operator console, the FastAPI orchestration layer, the Postgres + pgvector store, and the CI/CD pipeline that ships models behind feature flags.",
+    "category": "AI",
+    "client": "Internal — Banking",
+    "startDate": "2024-01-15",
+    "endDate": "2024-08-30",
+    "status": "published",
+    "publishedAt": "2024-09-01T00:00:00Z",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
+      "LangChain",
+      "OpenAI",
+      "Docker",
+      "AWS"
+    ],
+    "architecture": "Next.js 15 frontend on Vercel → FastAPI orchestration on ECS Fargate → Postgres + pgvector on RDS → S3 for document storage. Async event bus via SQS for ticket ingestion.",
+    "lessonsLearned": "The biggest lesson was treating the LLM as an unreliable component. Every prompt is wrapped in retry logic with structured outputs, and the system degrades gracefully to human-only when the model fails or returns low-confidence answers.",
+    "challenges": "Hallucination on edge-case tickets was the hard problem. Solved it with a combination of constrained decoding, RAG over runbooks, and a confidence threshold that forces human review below ~0.7.",
+    "businessImpact": "Resolved 42% of tier-1 tickets fully autonomously in the first month of pilot. Reduced average resolution time from 4.2 hours to 38 minutes for handled tickets.",
+    "githubUrl": "https://github.com/henockdev/smartdesk-ai",
+    "liveUrl": null,
+    "featured": true,
+    "pinned": true,
+    "thumbnail": "/projects/smartdesk.svg",
+    "banner": "/projects/smartdesk-banner.svg",
+    "media": [
+      {
+        "id": "m1",
+        "type": "image",
+        "url": "/projects/smartdesk.svg",
+        "alt": "SmartDesk dashboard",
+        "caption": "Operator console with real-time ticket queue"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Auto-resolved tier-1",
+        "value": "42%"
+      },
+      {
+        "label": "Avg resolution time",
+        "value": "38 min"
+      },
+      {
+        "label": "Confidence threshold",
+        "value": "0.70"
+      }
+    ],
+    "timeline": [
+      {
+        "label": "Architecture & data audit",
+        "date": "2024-01"
+      },
+      {
+        "label": "MVP with hardcoded RAG",
+        "date": "2024-03"
+      },
+      {
+        "label": "Operator console beta",
+        "date": "2024-06"
+      },
+      {
+        "label": "Production pilot",
+        "date": "2024-08"
+      }
+    ],
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-09-01T00:00:00Z"
+  },
+  {
+    "id": "proj_banking_mobile",
+    "slug": "banking-mobile-app",
+    "title": "Banking Mobile App Redesign",
+    "shortDescription": "Mobile-first banking experience with biometric auth and offline mode.",
+    "fullDescription": "Redesigned and rebuilt the customer-facing mobile banking app from scratch. Native-quality UX with biometric login, offline transaction queuing, and a design system that ships features in days, not weeks.\n\nThe architecture uses React Native with a thin native layer for biometric flows and secure storage. Offline transactions are queued in SQLite and synced via a conflict-resolution protocol when connectivity returns. The design system is a single source of truth used across web and mobile.",
+    "category": "Mobile",
+    "client": "Internal — Banking",
+    "startDate": "2023-06-01",
+    "endDate": "2024-01-15",
+    "status": "published",
+    "publishedAt": "2024-01-20T00:00:00Z",
+    "technologies": [
+      "React Native",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Firebase"
+    ],
+    "architecture": "React Native app → REST/GraphQL gateway → Node.js services → Postgres primary with read replicas. Biometric auth via native bridge. Secure storage using Keychain (iOS) and EncryptedSharedPreferences (Android).",
+    "lessonsLearned": "Building a real offline-first app is mostly about designing the sync model correctly upfront. We spent more time on conflict resolution than on the UI — and that was the right call.",
+    "challenges": "Compliance: every transaction needs to be auditable end-to-end, and offline mode makes that non-trivial. Solved with a signed transaction queue that is replayed in order when online.",
+    "businessImpact": "Increased mobile DAU by 64% in the first quarter after launch. App store rating went from 2.8 to 4.6.",
+    "githubUrl": null,
+    "liveUrl": null,
+    "featured": true,
+    "pinned": false,
+    "thumbnail": "/projects/banking.svg",
+    "banner": "/projects/banking-banner.svg",
+    "media": [
+      {
+        "id": "m1",
+        "type": "image",
+        "url": "/projects/banking.svg",
+        "alt": "Mobile banking screens",
+        "caption": "Dashboard, transfers, biometric login"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "DAU increase",
+        "value": "+64%"
+      },
+      {
+        "label": "App rating",
+        "value": "4.6 ★"
+      },
+      {
+        "label": "Sync conflicts",
+        "value": "<0.1%"
+      }
+    ],
+    "timeline": [
+      {
+        "label": "Discovery & compliance review",
+        "date": "2023-06"
+      },
+      {
+        "label": "Design system + prototype",
+        "date": "2023-08"
+      },
+      {
+        "label": "Beta with 1k users",
+        "date": "2023-11"
+      },
+      {
+        "label": "GA launch",
+        "date": "2024-01"
+      }
+    ],
+    "createdAt": "2023-06-01T00:00:00Z",
+    "updatedAt": "2024-01-20T00:00:00Z"
+  },
+  {
+    "id": "proj_change_ai",
+    "slug": "change-risk-ai",
+    "title": "Change Risk AI",
+    "shortDescription": "ML model that scores change requests by risk before they hit production.",
+    "fullDescription": "Change Risk AI is a machine learning service that scores every change request submitted to the CAB on a 0–100 risk scale, with explanations. Trained on five years of historical change records, incidents, and post-mortems.\n\nThe model is a gradient-boosted tree ensemble wrapped in a FastAPI service, with a SHAP-based explanation layer so change managers can see *why* a change is flagged. A monitoring dashboard tracks calibration drift and retrains automatically when accuracy drops below threshold.",
+    "category": "AI",
+    "client": "Internal — Banking",
+    "startDate": "2024-03-01",
+    "endDate": "2024-07-15",
+    "status": "published",
+    "publishedAt": "2024-07-20T00:00:00Z",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "scikit-learn",
+      "XGBoost",
+      "SHAP",
+      "PostgreSQL",
+      "Next.js"
+    ],
+    "architecture": "FastAPI inference service on ECS → feature store in Postgres → training pipeline on SageMaker. SHAP explanations computed at inference time and surfaced in the Next.js CAB console.",
+    "lessonsLearned": "Explainability mattered more than raw accuracy. Change managers wouldn't act on the score unless they understood the reason. SHAP was non-negotiable.",
+    "challenges": "Class imbalance (most changes are low-risk). Solved with SMOTE + cost-sensitive learning and a calibration layer that maps raw scores to a 0–100 scale.",
+    "businessImpact": "Reduced change failure rate from 12% to 5% within six months. CAB meetings cut from 90 to 45 minutes.",
+    "githubUrl": "https://github.com/henockdev/change-risk-ai",
+    "liveUrl": null,
+    "featured": true,
+    "pinned": false,
+    "thumbnail": "/projects/change-risk.svg",
+    "banner": "/projects/change-risk-banner.svg",
+    "media": [
+      {
+        "id": "m1",
+        "type": "image",
+        "url": "/projects/change-risk.svg",
+        "alt": "Risk dashboard",
+        "caption": "Risk scoring dashboard with SHAP explanations"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Change failure rate",
+        "value": "5%"
+      },
+      {
+        "label": "AUC",
+        "value": "0.91"
+      },
+      {
+        "label": "CAB meeting time",
+        "value": "-50%"
+      }
+    ],
+    "timeline": [
+      {
+        "label": "Data audit & labeling",
+        "date": "2024-03"
+      },
+      {
+        "label": "Model v1 + offline eval",
+        "date": "2024-05"
+      },
+      {
+        "label": "CAB pilot with shadow mode",
+        "date": "2024-06"
+      },
+      {
+        "label": "GA with monitoring",
+        "date": "2024-07"
+      }
+    ],
+    "createdAt": "2024-03-01T00:00:00Z",
+    "updatedAt": "2024-07-20T00:00:00Z"
+  },
+  {
+    "id": "proj_opsboard",
+    "slug": "opsboard",
+    "title": "OpsBoard",
+    "shortDescription": "Executive SLA dashboard for IT operations — built to be used, not just admired.",
+    "fullDescription": "OpsBoard is the executive-facing SLA dashboard for the IT org. Pulls data from ServiceNow, Grafana, and incident logs, and surfaces the metrics leadership actually cares about: availability, MTTR, change failure rate, top recurring incidents.\n\nDesigned to be the first tab opened in the morning — fast, dense, and honest. Built with Next.js and a streaming data layer so charts update in real time during incidents.",
+    "category": "Web",
+    "client": "Internal — Banking",
+    "startDate": "2023-09-01",
+    "endDate": "2023-12-15",
+    "status": "published",
+    "publishedAt": "2023-12-20T00:00:00Z",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Recharts",
+      "ServiceNow API",
+      "Grafana",
+      "WebSockets"
+    ],
+    "architecture": "Next.js dashboard → BFF aggregating ServiceNow + Grafana APIs → Postgres cache → WebSocket stream for live incident updates.",
+    "lessonsLearned": "An executive dashboard only works if it shows *one* thing per chart. Resist the urge to cram.",
+    "challenges": "Different data sources had different time zones and update cadences. Built a normalization layer that anchors everything to UTC and reconciles updates with a watermark.",
+    "businessImpact": "Adopted across the IT org. Cited as the single most useful internal tool in the next quarterly survey.",
+    "githubUrl": null,
+    "liveUrl": null,
+    "featured": false,
+    "pinned": false,
+    "thumbnail": "/projects/opsboard.svg",
+    "banner": "/projects/opsboard-banner.svg",
+    "media": [
+      {
+        "id": "m1",
+        "type": "image",
+        "url": "/projects/opsboard.svg",
+        "alt": "OpsBoard",
+        "caption": "Executive SLA overview"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Adoption",
+        "value": "100% of IT org"
+      },
+      {
+        "label": "Time to insight",
+        "value": "2 sec"
+      },
+      {
+        "label": "Live updates",
+        "value": "Real-time"
+      }
+    ],
+    "timeline": [
+      {
+        "label": "Stakeholder interviews",
+        "date": "2023-09"
+      },
+      {
+        "label": "MVP",
+        "date": "2023-10"
+      },
+      {
+        "label": "Realtime layer",
+        "date": "2023-11"
+      },
+      {
+        "label": "Org-wide launch",
+        "date": "2023-12"
+      }
+    ],
+    "createdAt": "2023-09-01T00:00:00Z",
+    "updatedAt": "2023-12-20T00:00:00Z"
+  },
+  {
+    "id": "proj_kbsearch",
+    "slug": "kb-semantic-search",
+    "title": "KB Semantic Search",
+    "shortDescription": "Semantic search over the IT knowledge base — find the runbook in seconds.",
+    "fullDescription": "Semantic search over an internal IT knowledge base of ~5,000 articles. Replaced keyword search with a sentence-transformer-based dense retrieval system. Users describe the problem in natural language and get the most relevant runbook, not just the one with the right keywords.\n\nBuilt with sentence-transformers, FAISS, and a Next.js search UI that surfaces results with the matching section highlighted.",
+    "category": "AI",
+    "client": "Internal — Banking",
+    "startDate": "2024-04-15",
+    "endDate": "2024-06-30",
+    "status": "published",
+    "publishedAt": "2024-07-01T00:00:00Z",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "sentence-transformers",
+      "FAISS",
+      "Next.js",
+      "TypeScript"
+    ],
+    "architecture": "sentence-transformers indexer runs nightly → FAISS index stored in S3 → FastAPI retrieval service → Next.js UI.",
+    "lessonsLearned": "Hybrid search (BM25 + dense) beat pure dense retrieval by a wide margin. Keyword signals still matter, especially for error codes and product names.",
+    "challenges": "Keeping the index fresh without rebuilding from scratch nightly. Used a delta-update pipeline that ingests only changed articles.",
+    "businessImpact": "Average time to find a runbook dropped from 6 minutes to 28 seconds. Self-service rate on tier-1 issues increased by 31%.",
+    "githubUrl": "https://github.com/henockdev/kb-search",
+    "liveUrl": null,
+    "featured": false,
+    "pinned": false,
+    "thumbnail": "/projects/kb.svg",
+    "banner": "/projects/kb-banner.svg",
+    "media": [
+      {
+        "id": "m1",
+        "type": "image",
+        "url": "/projects/kb.svg",
+        "alt": "KB search",
+        "caption": "Semantic search UI"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Time to find runbook",
+        "value": "28 sec"
+      },
+      {
+        "label": "Self-service tier-1",
+        "value": "+31%"
+      },
+      {
+        "label": "Recall@10",
+        "value": "0.88"
+      }
+    ],
+    "timeline": [
+      {
+        "label": "Indexing pipeline",
+        "date": "2024-04"
+      },
+      {
+        "label": "Retrieval service MVP",
+        "date": "2024-05"
+      },
+      {
+        "label": "UI + hybrid search",
+        "date": "2024-06"
+      }
+    ],
+    "createdAt": "2024-04-15T00:00:00Z",
+    "updatedAt": "2024-07-01T00:00:00Z"
+  },
+  {
+    "id": "proj_devtools",
+    "slug": "devtooling-cli",
+    "title": "DevTooling CLI",
+    "shortDescription": "Open-source CLI that automates the boring parts of shipping software.",
+    "fullDescription": "An open-source command-line tool that automates the boring parts of shipping software: scaffolding, environment checks, deployment previews, and post-deploy verification. Written in Go for fast startup, distributed as a single static binary.\n\nUsed by ~2,000 developers across multiple teams. Featured on the GitHub trending list for a week.",
+    "category": "Open Source",
+    "client": "OSS",
+    "startDate": "2023-04-01",
+    "endDate": null,
+    "status": "published",
+    "publishedAt": "2023-04-15T00:00:00Z",
+    "technologies": [
+      "Go",
+      "GitHub Actions",
+      "Docker",
+      "Shell"
+    ],
+    "architecture": "Single Go binary → pluggable subcommands → GitHub Action for CI integration.",
+    "lessonsLearned": "Documentation matters more than features. Adding clear examples tripled weekly active users.",
+    "challenges": "Cross-platform packaging without CI headaches. Settled on GoReleaser after two false starts.",
+    "businessImpact": "2,000+ active developers, 800+ GitHub stars.",
+    "githubUrl": "https://github.com/henockdev/devtool",
+    "liveUrl": null,
+    "featured": false,
+    "pinned": false,
+    "thumbnail": "/projects/devtools.svg",
+    "banner": "/projects/devtools-banner.svg",
+    "media": [
+      {
+        "id": "m1",
+        "type": "image",
+        "url": "/projects/devtools.svg",
+        "alt": "DevTool CLI",
+        "caption": "CLI in action"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Active devs",
+        "value": "2,000+"
+      },
+      {
+        "label": "GitHub stars",
+        "value": "800+"
+      },
+      {
+        "label": "Cold start",
+        "value": "<50ms"
+      }
+    ],
+    "timeline": [
+      {
+        "label": "Initial release",
+        "date": "2023-04"
+      },
+      {
+        "label": "GitHub Action",
+        "date": "2023-07"
+      },
+      {
+        "label": "Trending",
+        "date": "2023-10"
+      }
+    ],
+    "createdAt": "2023-04-01T00:00:00Z",
+    "updatedAt": "2024-09-01T00:00:00Z"
+  }
+]

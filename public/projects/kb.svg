@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#22D3EE" stop-opacity="0.3"/><stop offset="100%" stop-color="#050816"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect x="60" y="80" width="680" height="60" rx="30" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="100" y="118" font-family="Inter, sans-serif" font-size="14" fill="#94A3B8">How do I reset VPN access for a new hire?</text>
+  <rect x="60" y="170" width="680" height="70" rx="10" fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)"/>
+  <text x="80" y="200" font-family="Inter, sans-serif" font-size="11" fill="#38BDF8">RUNBOOK · 0.94 match</text>
+  <text x="80" y="225" font-family="Inter, sans-serif" font-size="14" fill="#fff">VPN provisioning — new joiner checklist</text>
+  <rect x="60" y="260" width="680" height="70" rx="10" fill="rgba(139,92,246,0.1)" stroke="rgba(139,92,246,0.3)"/>
+  <text x="80" y="290" font-family="Inter, sans-serif" font-size="11" fill="#8B5CF6">RUNBOOK · 0.81 match</text>
+  <text x="80" y="315" font-family="Inter, sans-serif" font-size="14" fill="#fff">Network access troubleshooting flow</text>
+  <rect x="60" y="350" width="680" height="70" rx="10" fill="rgba(34,211,238,0.1)" stroke="rgba(34,211,238,0.3)"/>
+  <text x="80" y="380" font-family="Inter, sans-serif" font-size="11" fill="#22D3EE">FAQ · 0.73 match</text>
+  <text x="80" y="405" font-family="Inter, sans-serif" font-size="14" fill="#fff">Common VPN error codes and fixes</text>
+</svg>
