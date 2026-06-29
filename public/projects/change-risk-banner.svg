@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" fill="none">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1600" y2="600" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#050816"/></linearGradient></defs>
-  <rect width="1600" height="600" fill="url(#g)"/>
-  <text x="100" y="320" font-family="Inter, sans-serif" font-size="84" font-weight="800" fill="#fff">Change Risk AI</text>
-  <text x="100" y="380" font-family="Inter, sans-serif" font-size="22" fill="#94A3B8">ML-scored change requests · SHAP explainability</text>
-</svg>
