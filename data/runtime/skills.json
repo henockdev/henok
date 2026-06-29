@@ -1,0 +1,282 @@
+[
+  {
+    "name": "React",
+    "category": "Frontend",
+    "proficiency": 95,
+    "years": 5,
+    "projects": 20
+  },
+  {
+    "name": "Next.js",
+    "category": "Frontend",
+    "proficiency": 92,
+    "years": 4,
+    "projects": 15
+  },
+  {
+    "name": "TypeScript",
+    "category": "Frontend",
+    "proficiency": 90,
+    "years": 4,
+    "projects": 18
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "proficiency": 95,
+    "years": 4,
+    "projects": 22
+  },
+  {
+    "name": "Framer Motion",
+    "category": "Frontend",
+    "proficiency": 85,
+    "years": 3,
+    "projects": 10
+  },
+  {
+    "name": "Three.js",
+    "category": "Frontend",
+    "proficiency": 75,
+    "years": 2,
+    "projects": 5
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend",
+    "proficiency": 92,
+    "years": 5,
+    "projects": 18
+  },
+  {
+    "name": "Express",
+    "category": "Backend",
+    "proficiency": 85,
+    "years": 4,
+    "projects": 12
+  },
+  {
+    "name": "Python",
+    "category": "Backend",
+    "proficiency": 90,
+    "years": 5,
+    "projects": 16
+  },
+  {
+    "name": "FastAPI",
+    "category": "Backend",
+    "proficiency": 82,
+    "years": 2,
+    "projects": 6
+  },
+  {
+    "name": "REST APIs",
+    "category": "Backend",
+    "proficiency": 95,
+    "years": 5,
+    "projects": 25
+  },
+  {
+    "name": "GraphQL",
+    "category": "Backend",
+    "proficiency": 78,
+    "years": 2,
+    "projects": 4
+  },
+  {
+    "name": "React Native",
+    "category": "Mobile",
+    "proficiency": 88,
+    "years": 3,
+    "projects": 8
+  },
+  {
+    "name": "Flutter",
+    "category": "Mobile",
+    "proficiency": 80,
+    "years": 2,
+    "projects": 4
+  },
+  {
+    "name": "iOS (Swift)",
+    "category": "Mobile",
+    "proficiency": 70,
+    "years": 2,
+    "projects": 3
+  },
+  {
+    "name": "Android (Kotlin)",
+    "category": "Mobile",
+    "proficiency": 72,
+    "years": 2,
+    "projects": 3
+  },
+  {
+    "name": "TensorFlow",
+    "category": "AI",
+    "proficiency": 80,
+    "years": 3,
+    "projects": 5
+  },
+  {
+    "name": "PyTorch",
+    "category": "AI",
+    "proficiency": 78,
+    "years": 2,
+    "projects": 4
+  },
+  {
+    "name": "LangChain",
+    "category": "AI",
+    "proficiency": 85,
+    "years": 1,
+    "projects": 4
+  },
+  {
+    "name": "OpenAI APIs",
+    "category": "AI",
+    "proficiency": 90,
+    "years": 2,
+    "projects": 6
+  },
+  {
+    "name": "Hugging Face",
+    "category": "AI",
+    "proficiency": 82,
+    "years": 2,
+    "projects": 4
+  },
+  {
+    "name": "Computer Vision",
+    "category": "AI",
+    "proficiency": 78,
+    "years": 2,
+    "projects": 3
+  },
+  {
+    "name": "NLP",
+    "category": "AI",
+    "proficiency": 80,
+    "years": 2,
+    "projects": 4
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "Databases",
+    "proficiency": 88,
+    "years": 4,
+    "projects": 14
+  },
+  {
+    "name": "MongoDB",
+    "category": "Databases",
+    "proficiency": 82,
+    "years": 3,
+    "projects": 8
+  },
+  {
+    "name": "Redis",
+    "category": "Databases",
+    "proficiency": 80,
+    "years": 3,
+    "projects": 7
+  },
+  {
+    "name": "AWS",
+    "category": "Cloud",
+    "proficiency": 85,
+    "years": 3,
+    "projects": 12
+  },
+  {
+    "name": "GCP",
+    "category": "Cloud",
+    "proficiency": 75,
+    "years": 2,
+    "projects": 5
+  },
+  {
+    "name": "Vercel",
+    "category": "Cloud",
+    "proficiency": 92,
+    "years": 3,
+    "projects": 20
+  },
+  {
+    "name": "Docker",
+    "category": "DevOps",
+    "proficiency": 85,
+    "years": 3,
+    "projects": 14
+  },
+  {
+    "name": "Kubernetes",
+    "category": "DevOps",
+    "proficiency": 72,
+    "years": 1,
+    "projects": 4
+  },
+  {
+    "name": "CI/CD",
+    "category": "DevOps",
+    "proficiency": 88,
+    "years": 4,
+    "projects": 18
+  },
+  {
+    "name": "GitHub Actions",
+    "category": "DevOps",
+    "proficiency": 90,
+    "years": 4,
+    "projects": 22
+  },
+  {
+    "name": "Terraform",
+    "category": "DevOps",
+    "proficiency": 70,
+    "years": 1,
+    "projects": 3
+  },
+  {
+    "name": "Cisco Networking",
+    "category": "Networking",
+    "proficiency": 80,
+    "years": 3,
+    "projects": 5
+  },
+  {
+    "name": "TCP/IP",
+    "category": "Networking",
+    "proficiency": 85,
+    "years": 4,
+    "projects": 6
+  },
+  {
+    "name": "ServiceNow",
+    "category": "ITSM",
+    "proficiency": 88,
+    "years": 2,
+    "projects": 3
+  },
+  {
+    "name": "ITIL",
+    "category": "ITSM",
+    "proficiency": 85,
+    "years": 2,
+    "projects": 3
+  },
+  {
+    "name": "Incident Management",
+    "category": "ITSM",
+    "proficiency": 90,
+    "years": 2,
+    "projects": 5
+  },
+  {
+    "name": "Change Management",
+    "category": "ITSM",
+    "proficiency": 88,
+    "years": 2,
+    "projects": 5
+  }
+]

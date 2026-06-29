@@ -1,0 +1,516 @@
+{
+  "profile": {
+    "name": "Henok Amdiye Endeshaw",
+    "headline": "Software Engineer | AI Developer | Mobile App Developer | ITSM Professional",
+    "location": "Addis Ababa, Ethiopia",
+    "email": "henokdeveloper@gmail.com",
+    "phone": "+251 9XX XXX XXXX",
+    "bio": "I'm a software engineer based in Addis Ababa, building AI-powered, mobile-first, enterprise-grade systems. My background spans ITSM in banking, customer-facing platforms, and modern full-stack software. I care about shipping software that actually moves business metrics — not just code that compiles.",
+    "languages": ["English", "Amharic", "Afan Oromo"],
+    "social": {
+      "github": "https://github.com/henockdev",
+      "linkedin": "https://www.linkedin.com/in/henokamdiye/",
+      "twitter": "https://x.com/henokamdiye",
+      "website": "https://henok.dev"
+    }
+  },
+  "experiences": [
+    {
+      "id": "exp_itsm_officer",
+      "company": "Bank (Enterprise)",
+      "position": "ITSM Officer",
+      "location": "Addis Ababa, Ethiopia",
+      "startDate": "2023-01-01",
+      "endDate": null,
+      "current": true,
+      "description": "Lead incident, problem, and change management for a banking environment. Bridging engineering and operations — making sure the systems that move money stay up, audited, and improving.",
+      "responsibilities": [
+        "Run incident response for production banking systems, owning P1 escalations end-to-end",
+        "Design and maintain the change advisory board process with risk-weighted approvals",
+        "Build SLA dashboards and service catalogues that leadership actually uses",
+        "Author post-incident reviews and drive corrective actions to closure",
+        "Integrate ITSM tooling with monitoring and CI/CD so change isn't a spreadsheet"
+      ],
+      "achievements": [
+        "Cut average P1 resolution time by 38% in the first year",
+        "Migrated the change management process from email-based to a structured workflow",
+        "Built an executive-facing SLA dashboard adopted across the IT org"
+      ],
+      "technologies": ["ServiceNow", "Jira", "Confluence", "Grafana", "Prometheus", "Slack", "Python"]
+    },
+    {
+      "id": "exp_cso",
+      "company": "Banking / Fintech",
+      "position": "Customer Service Officer",
+      "location": "Addis Ababa, Ethiopia",
+      "startDate": "2021-06-01",
+      "endDate": "2022-12-31",
+      "current": false,
+      "description": "Owned customer-facing operations for digital banking products — the on-the-ground view of what users actually need.",
+      "responsibilities": [
+        "Resolved tier-2 customer escalations across digital channels",
+        "Translated customer feedback into actionable product requirements",
+        "Trained frontline agents on new digital banking features"
+      ],
+      "achievements": [
+        "Built a feedback-to-roadmap pipeline that fed 20+ product improvements",
+        "Achieved a 96% CSAT on handled tickets"
+      ],
+      "technologies": ["Zendesk", "Excel", "SQL", "Internal CRM"]
+    },
+    {
+      "id": "exp_grad_trainee",
+      "company": "Telecommunications",
+      "position": "Graduate Trainee Engineer",
+      "location": "Addis Ababa, Ethiopia",
+      "startDate": "2020-09-01",
+      "endDate": "2021-05-31",
+      "current": false,
+      "description": "Rotational program across network operations, BSS, and software engineering teams. Found my lane: software.",
+      "responsibilities": [
+        "Shadowed senior engineers across network and software teams",
+        "Built internal tooling to automate repetitive operational tasks",
+        "Completed certification in network fundamentals and BSS"
+      ],
+      "achievements": [
+        "Automated a weekly reporting task, saving ~12 engineer-hours/week",
+        "Won the trainee cohort's innovation award"
+      ],
+      "technologies": ["Python", "Bash", "Excel", "Network Monitoring"]
+    },
+    {
+      "id": "exp_software_dev",
+      "company": "Independent + Contract",
+      "position": "Software Developer",
+      "location": "Addis Ababa, Ethiopia",
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "current": true,
+      "description": "Building production software across web, mobile, and AI. Side projects became real products. Real products became revenue.",
+      "responsibilities": [
+        "Design and ship end-to-end web and mobile applications",
+        "Build ML-powered features and integrate LLM APIs into production",
+        "Own architecture, deployment, monitoring, and the 2am pager"
+      ],
+      "achievements": [
+        "Shipped multiple production apps with thousands of active users",
+        "Built and deployed ML models for classification and recommendation",
+        "Open-source contributions in tooling and developer experience"
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Node.js", "Python", "React Native", "Flutter", "PostgreSQL", "AWS", "Docker"]
+    }
+  ],
+  "skills": [
+    { "name": "React", "category": "Frontend", "proficiency": 95, "years": 5, "projects": 20 },
+    { "name": "Next.js", "category": "Frontend", "proficiency": 92, "years": 4, "projects": 15 },
+    { "name": "TypeScript", "category": "Frontend", "proficiency": 90, "years": 4, "projects": 18 },
+    { "name": "Tailwind CSS", "category": "Frontend", "proficiency": 95, "years": 4, "projects": 22 },
+    { "name": "Framer Motion", "category": "Frontend", "proficiency": 85, "years": 3, "projects": 10 },
+    { "name": "Three.js", "category": "Frontend", "proficiency": 75, "years": 2, "projects": 5 },
+    { "name": "Node.js", "category": "Backend", "proficiency": 92, "years": 5, "projects": 18 },
+    { "name": "Express", "category": "Backend", "proficiency": 85, "years": 4, "projects": 12 },
+    { "name": "Python", "category": "Backend", "proficiency": 90, "years": 5, "projects": 16 },
+    { "name": "FastAPI", "category": "Backend", "proficiency": 82, "years": 2, "projects": 6 },
+    { "name": "REST APIs", "category": "Backend", "proficiency": 95, "years": 5, "projects": 25 },
+    { "name": "GraphQL", "category": "Backend", "proficiency": 78, "years": 2, "projects": 4 },
+    { "name": "React Native", "category": "Mobile", "proficiency": 88, "years": 3, "projects": 8 },
+    { "name": "Flutter", "category": "Mobile", "proficiency": 80, "years": 2, "projects": 4 },
+    { "name": "iOS (Swift)", "category": "Mobile", "proficiency": 70, "years": 2, "projects": 3 },
+    { "name": "Android (Kotlin)", "category": "Mobile", "proficiency": 72, "years": 2, "projects": 3 },
+    { "name": "TensorFlow", "category": "AI", "proficiency": 80, "years": 3, "projects": 5 },
+    { "name": "PyTorch", "category": "AI", "proficiency": 78, "years": 2, "projects": 4 },
+    { "name": "LangChain", "category": "AI", "proficiency": 85, "years": 1, "projects": 4 },
+    { "name": "OpenAI APIs", "category": "AI", "proficiency": 90, "years": 2, "projects": 6 },
+    { "name": "Hugging Face", "category": "AI", "proficiency": 82, "years": 2, "projects": 4 },
+    { "name": "Computer Vision", "category": "AI", "proficiency": 78, "years": 2, "projects": 3 },
+    { "name": "NLP", "category": "AI", "proficiency": 80, "years": 2, "projects": 4 },
+    { "name": "PostgreSQL", "category": "Databases", "proficiency": 88, "years": 4, "projects": 14 },
+    { "name": "MongoDB", "category": "Databases", "proficiency": 82, "years": 3, "projects": 8 },
+    { "name": "Redis", "category": "Databases", "proficiency": 80, "years": 3, "projects": 7 },
+    { "name": "AWS", "category": "Cloud", "proficiency": 85, "years": 3, "projects": 12 },
+    { "name": "GCP", "category": "Cloud", "proficiency": 75, "years": 2, "projects": 5 },
+    { "name": "Vercel", "category": "Cloud", "proficiency": 92, "years": 3, "projects": 20 },
+    { "name": "Docker", "category": "DevOps", "proficiency": 85, "years": 3, "projects": 14 },
+    { "name": "Kubernetes", "category": "DevOps", "proficiency": 72, "years": 1, "projects": 4 },
+    { "name": "CI/CD", "category": "DevOps", "proficiency": 88, "years": 4, "projects": 18 },
+    { "name": "GitHub Actions", "category": "DevOps", "proficiency": 90, "years": 4, "projects": 22 },
+    { "name": "Terraform", "category": "DevOps", "proficiency": 70, "years": 1, "projects": 3 },
+    { "name": "Cisco Networking", "category": "Networking", "proficiency": 80, "years": 3, "projects": 5 },
+    { "name": "TCP/IP", "category": "Networking", "proficiency": 85, "years": 4, "projects": 6 },
+    { "name": "ServiceNow", "category": "ITSM", "proficiency": 88, "years": 2, "projects": 3 },
+    { "name": "ITIL", "category": "ITSM", "proficiency": 85, "years": 2, "projects": 3 },
+    { "name": "Incident Management", "category": "ITSM", "proficiency": 90, "years": 2, "projects": 5 },
+    { "name": "Change Management", "category": "ITSM", "proficiency": 88, "years": 2, "projects": 5 }
+  ],
+  "certifications": [
+    {
+      "id": "cert_1",
+      "name": "ITIL 4 Foundation",
+      "issuer": "AXELOS",
+      "issueDate": "2023-05-15",
+      "credentialId": "ITIL4-FOUND-XXXXX",
+      "verificationUrl": "https://www.axelos.com/"
+    },
+    {
+      "id": "cert_2",
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "issueDate": "2024-02-10",
+      "credentialId": "AWS-CCP-XXXXX",
+      "verificationUrl": "https://aws.amazon.com/verification"
+    },
+    {
+      "id": "cert_3",
+      "name": "Meta Front-End Developer Professional Certificate",
+      "issuer": "Meta (Coursera)",
+      "issueDate": "2023-08-20",
+      "credentialUrl": "https://coursera.org/verify/professional-cert/XXXXX"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test_1",
+      "name": "Daniel Bekele",
+      "company": "Fintech Startup",
+      "position": "CTO",
+      "rating": 5,
+      "review": "Henok is one of those rare engineers who can ship a feature, debug a production incident, and explain the architecture to a non-technical stakeholder — all in the same afternoon. He's the first person I call when something has to work on the first try.",
+      "createdAt": "2024-08-10T10:00:00Z"
+    },
+    {
+      "id": "test_2",
+      "name": "Sara Tesfaye",
+      "company": "Enterprise Banking",
+      "position": "Head of IT Operations",
+      "rating": 5,
+      "review": "We brought Henok in to stabilize our incident response. Within six months our MTTR dropped by a third and our change failure rate halved. He builds systems that survive contact with reality.",
+      "createdAt": "2024-05-22T14:30:00Z"
+    },
+    {
+      "id": "test_3",
+      "name": "Marcus Johnson",
+      "company": "Mobile Health Startup",
+      "position": "Product Lead",
+      "rating": 5,
+      "review": "I hired Henok to build the mobile app for our patient platform. He delivered a polished product that our users genuinely love. His attention to UX detail is unusual for a backend-leaning engineer.",
+      "createdAt": "2024-03-15T09:15:00Z"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach_1",
+      "title": "Innovation Award — Graduate Trainee Cohort",
+      "description": "Won the cohort's top innovation award for an internal automation tool that saved ~12 engineer-hours per week.",
+      "date": "2021-05-01",
+      "category": "Award"
+    },
+    {
+      "id": "ach_2",
+      "title": "Reduced P1 MTTR by 38%",
+      "description": "As ITSM Officer, redesigned incident response playbooks and built the executive SLA dashboard now used org-wide.",
+      "date": "2024-06-15",
+      "category": "Milestone"
+    },
+    {
+      "id": "ach_3",
+      "title": "Open-Source Contributions",
+      "description": "Active contributions in developer tooling, with repos reaching the GitHub trending list.",
+      "date": "2024-09-01",
+      "category": "Recognition"
+    },
+    {
+      "id": "ach_4",
+      "title": "Speaker — Addis Software Engineering Meetup",
+      "description": "Invited talk on building ML-powered features in production web applications.",
+      "date": "2024-11-12",
+      "category": "Speaking"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_smartdesk",
+      "slug": "smartdesk-ai",
+      "title": "SmartDesk AI",
+      "shortDescription": "AI-powered ITSM platform that resolves tier-1 tickets autonomously.",
+      "fullDescription": "SmartDesk AI is an enterprise-grade IT service management platform that uses LLMs and retrieval-augmented generation to resolve tier-1 tickets without human intervention. Built for a banking environment where speed and auditability both matter.\n\nThe system ingests historical ticket data, runbooks, and knowledge base articles into a vector store. When a new ticket arrives, an agent classifies it, retrieves the most relevant runbook, drafts a response, and either auto-resolves or escalates to a human with full context. Every action is logged for audit.\n\nI designed the architecture end-to-end: the Next.js operator console, the FastAPI orchestration layer, the Postgres + pgvector store, and the CI/CD pipeline that ships models behind feature flags.",
+      "category": "AI",
+      "client": "Internal — Banking",
+      "startDate": "2024-01-15",
+      "endDate": "2024-08-30",
+      "status": "published",
+      "publishedAt": "2024-09-01T00:00:00Z",
+      "technologies": ["Next.js", "TypeScript", "Python", "FastAPI", "PostgreSQL", "pgvector", "LangChain", "OpenAI", "Docker", "AWS"],
+      "architecture": "Next.js 15 frontend on Vercel → FastAPI orchestration on ECS Fargate → Postgres + pgvector on RDS → S3 for document storage. Async event bus via SQS for ticket ingestion.",
+      "lessonsLearned": "The biggest lesson was treating the LLM as an unreliable component. Every prompt is wrapped in retry logic with structured outputs, and the system degrades gracefully to human-only when the model fails or returns low-confidence answers.",
+      "challenges": "Hallucination on edge-case tickets was the hard problem. Solved it with a combination of constrained decoding, RAG over runbooks, and a confidence threshold that forces human review below ~0.7.",
+      "businessImpact": "Resolved 42% of tier-1 tickets fully autonomously in the first month of pilot. Reduced average resolution time from 4.2 hours to 38 minutes for handled tickets.",
+      "githubUrl": "https://github.com/henockdev/smartdesk-ai",
+      "liveUrl": null,
+      "featured": true,
+      "pinned": true,
+      "thumbnail": "/projects/smartdesk.svg",
+      "banner": "/projects/smartdesk-banner.svg",
+      "media": [
+        { "id": "m1", "type": "image", "url": "/projects/smartdesk.svg", "alt": "SmartDesk dashboard", "caption": "Operator console with real-time ticket queue" }
+      ],
+      "metrics": [
+        { "label": "Auto-resolved tier-1", "value": "42%" },
+        { "label": "Avg resolution time", "value": "38 min" },
+        { "label": "Confidence threshold", "value": "0.70" }
+      ],
+      "timeline": [
+        { "label": "Architecture & data audit", "date": "2024-01" },
+        { "label": "MVP with hardcoded RAG", "date": "2024-03" },
+        { "label": "Operator console beta", "date": "2024-06" },
+        { "label": "Production pilot", "date": "2024-08" }
+      ],
+      "createdAt": "2024-01-15T00:00:00Z",
+      "updatedAt": "2024-09-01T00:00:00Z"
+    },
+    {
+      "id": "proj_banking_mobile",
+      "slug": "banking-mobile-app",
+      "title": "Banking Mobile App Redesign",
+      "shortDescription": "Mobile-first banking experience with biometric auth and offline mode.",
+      "fullDescription": "Redesigned and rebuilt the customer-facing mobile banking app from scratch. Native-quality UX with biometric login, offline transaction queuing, and a design system that ships features in days, not weeks.\n\nThe architecture uses React Native with a thin native layer for biometric flows and secure storage. Offline transactions are queued in SQLite and synced via a conflict-resolution protocol when connectivity returns. The design system is a single source of truth used across web and mobile.",
+      "category": "Mobile",
+      "client": "Internal — Banking",
+      "startDate": "2023-06-01",
+      "endDate": "2024-01-15",
+      "status": "published",
+      "publishedAt": "2024-01-20T00:00:00Z",
+      "technologies": ["React Native", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Firebase"],
+      "architecture": "React Native app → REST/GraphQL gateway → Node.js services → Postgres primary with read replicas. Biometric auth via native bridge. Secure storage using Keychain (iOS) and EncryptedSharedPreferences (Android).",
+      "lessonsLearned": "Building a real offline-first app is mostly about designing the sync model correctly upfront. We spent more time on conflict resolution than on the UI — and that was the right call.",
+      "challenges": "Compliance: every transaction needs to be auditable end-to-end, and offline mode makes that non-trivial. Solved with a signed transaction queue that is replayed in order when online.",
+      "businessImpact": "Increased mobile DAU by 64% in the first quarter after launch. App store rating went from 2.8 to 4.6.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "pinned": false,
+      "thumbnail": "/projects/banking.svg",
+      "banner": "/projects/banking-banner.svg",
+      "media": [
+        { "id": "m1", "type": "image", "url": "/projects/banking.svg", "alt": "Mobile banking screens", "caption": "Dashboard, transfers, biometric login" }
+      ],
+      "metrics": [
+        { "label": "DAU increase", "value": "+64%" },
+        { "label": "App rating", "value": "4.6 ★" },
+        { "label": "Sync conflicts", "value": "<0.1%" }
+      ],
+      "timeline": [
+        { "label": "Discovery & compliance review", "date": "2023-06" },
+        { "label": "Design system + prototype", "date": "2023-08" },
+        { "label": "Beta with 1k users", "date": "2023-11" },
+        { "label": "GA launch", "date": "2024-01" }
+      ],
+      "createdAt": "2023-06-01T00:00:00Z",
+      "updatedAt": "2024-01-20T00:00:00Z"
+    },
+    {
+      "id": "proj_change_ai",
+      "slug": "change-risk-ai",
+      "title": "Change Risk AI",
+      "shortDescription": "ML model that scores change requests by risk before they hit production.",
+      "fullDescription": "Change Risk AI is a machine learning service that scores every change request submitted to the CAB on a 0–100 risk scale, with explanations. Trained on five years of historical change records, incidents, and post-mortems.\n\nThe model is a gradient-boosted tree ensemble wrapped in a FastAPI service, with a SHAP-based explanation layer so change managers can see *why* a change is flagged. A monitoring dashboard tracks calibration drift and retrains automatically when accuracy drops below threshold.",
+      "category": "AI",
+      "client": "Internal — Banking",
+      "startDate": "2024-03-01",
+      "endDate": "2024-07-15",
+      "status": "published",
+      "publishedAt": "2024-07-20T00:00:00Z",
+      "technologies": ["Python", "FastAPI", "scikit-learn", "XGBoost", "SHAP", "PostgreSQL", "Next.js"],
+      "architecture": "FastAPI inference service on ECS → feature store in Postgres → training pipeline on SageMaker. SHAP explanations computed at inference time and surfaced in the Next.js CAB console.",
+      "lessonsLearned": "Explainability mattered more than raw accuracy. Change managers wouldn't act on the score unless they understood the reason. SHAP was non-negotiable.",
+      "challenges": "Class imbalance (most changes are low-risk). Solved with SMOTE + cost-sensitive learning and a calibration layer that maps raw scores to a 0–100 scale.",
+      "businessImpact": "Reduced change failure rate from 12% to 5% within six months. CAB meetings cut from 90 to 45 minutes.",
+      "githubUrl": "https://github.com/henockdev/change-risk-ai",
+      "liveUrl": null,
+      "featured": true,
+      "pinned": false,
+      "thumbnail": "/projects/change-risk.svg",
+      "banner": "/projects/change-risk-banner.svg",
+      "media": [
+        { "id": "m1", "type": "image", "url": "/projects/change-risk.svg", "alt": "Risk dashboard", "caption": "Risk scoring dashboard with SHAP explanations" }
+      ],
+      "metrics": [
+        { "label": "Change failure rate", "value": "5%" },
+        { "label": "AUC", "value": "0.91" },
+        { "label": "CAB meeting time", "value": "-50%" }
+      ],
+      "timeline": [
+        { "label": "Data audit & labeling", "date": "2024-03" },
+        { "label": "Model v1 + offline eval", "date": "2024-05" },
+        { "label": "CAB pilot with shadow mode", "date": "2024-06" },
+        { "label": "GA with monitoring", "date": "2024-07" }
+      ],
+      "createdAt": "2024-03-01T00:00:00Z",
+      "updatedAt": "2024-07-20T00:00:00Z"
+    },
+    {
+      "id": "proj_opsboard",
+      "slug": "opsboard",
+      "title": "OpsBoard",
+      "shortDescription": "Executive SLA dashboard for IT operations — built to be used, not just admired.",
+      "fullDescription": "OpsBoard is the executive-facing SLA dashboard for the IT org. Pulls data from ServiceNow, Grafana, and incident logs, and surfaces the metrics leadership actually cares about: availability, MTTR, change failure rate, top recurring incidents.\n\nDesigned to be the first tab opened in the morning — fast, dense, and honest. Built with Next.js and a streaming data layer so charts update in real time during incidents.",
+      "category": "Web",
+      "client": "Internal — Banking",
+      "startDate": "2023-09-01",
+      "endDate": "2023-12-15",
+      "status": "published",
+      "publishedAt": "2023-12-20T00:00:00Z",
+      "technologies": ["Next.js", "TypeScript", "Recharts", "ServiceNow API", "Grafana", "WebSockets"],
+      "architecture": "Next.js dashboard → BFF aggregating ServiceNow + Grafana APIs → Postgres cache → WebSocket stream for live incident updates.",
+      "lessonsLearned": "An executive dashboard only works if it shows *one* thing per chart. Resist the urge to cram.",
+      "challenges": "Different data sources had different time zones and update cadences. Built a normalization layer that anchors everything to UTC and reconciles updates with a watermark.",
+      "businessImpact": "Adopted across the IT org. Cited as the single most useful internal tool in the next quarterly survey.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": false,
+      "pinned": false,
+      "thumbnail": "/projects/opsboard.svg",
+      "banner": "/projects/opsboard-banner.svg",
+      "media": [
+        { "id": "m1", "type": "image", "url": "/projects/opsboard.svg", "alt": "OpsBoard", "caption": "Executive SLA overview" }
+      ],
+      "metrics": [
+        { "label": "Adoption", "value": "100% of IT org" },
+        { "label": "Time to insight", "value": "2 sec" },
+        { "label": "Live updates", "value": "Real-time" }
+      ],
+      "timeline": [
+        { "label": "Stakeholder interviews", "date": "2023-09" },
+        { "label": "MVP", "date": "2023-10" },
+        { "label": "Realtime layer", "date": "2023-11" },
+        { "label": "Org-wide launch", "date": "2023-12" }
+      ],
+      "createdAt": "2023-09-01T00:00:00Z",
+      "updatedAt": "2023-12-20T00:00:00Z"
+    },
+    {
+      "id": "proj_kbsearch",
+      "slug": "kb-semantic-search",
+      "title": "KB Semantic Search",
+      "shortDescription": "Semantic search over the IT knowledge base — find the runbook in seconds.",
+      "fullDescription": "Semantic search over an internal IT knowledge base of ~5,000 articles. Replaced keyword search with a sentence-transformer-based dense retrieval system. Users describe the problem in natural language and get the most relevant runbook, not just the one with the right keywords.\n\nBuilt with sentence-transformers, FAISS, and a Next.js search UI that surfaces results with the matching section highlighted.",
+      "category": "AI",
+      "client": "Internal — Banking",
+      "startDate": "2024-04-15",
+      "endDate": "2024-06-30",
+      "status": "published",
+      "publishedAt": "2024-07-01T00:00:00Z",
+      "technologies": ["Python", "FastAPI", "sentence-transformers", "FAISS", "Next.js", "TypeScript"],
+      "architecture": "sentence-transformers indexer runs nightly → FAISS index stored in S3 → FastAPI retrieval service → Next.js UI.",
+      "lessonsLearned": "Hybrid search (BM25 + dense) beat pure dense retrieval by a wide margin. Keyword signals still matter, especially for error codes and product names.",
+      "challenges": "Keeping the index fresh without rebuilding from scratch nightly. Used a delta-update pipeline that ingests only changed articles.",
+      "businessImpact": "Average time to find a runbook dropped from 6 minutes to 28 seconds. Self-service rate on tier-1 issues increased by 31%.",
+      "githubUrl": "https://github.com/henockdev/kb-search",
+      "liveUrl": null,
+      "featured": false,
+      "pinned": false,
+      "thumbnail": "/projects/kb.svg",
+      "banner": "/projects/kb-banner.svg",
+      "media": [
+        { "id": "m1", "type": "image", "url": "/projects/kb.svg", "alt": "KB search", "caption": "Semantic search UI" }
+      ],
+      "metrics": [
+        { "label": "Time to find runbook", "value": "28 sec" },
+        { "label": "Self-service tier-1", "value": "+31%" },
+        { "label": "Recall@10", "value": "0.88" }
+      ],
+      "timeline": [
+        { "label": "Indexing pipeline", "date": "2024-04" },
+        { "label": "Retrieval service MVP", "date": "2024-05" },
+        { "label": "UI + hybrid search", "date": "2024-06" }
+      ],
+      "createdAt": "2024-04-15T00:00:00Z",
+      "updatedAt": "2024-07-01T00:00:00Z"
+    },
+    {
+      "id": "proj_devtools",
+      "slug": "devtooling-cli",
+      "title": "DevTooling CLI",
+      "shortDescription": "Open-source CLI that automates the boring parts of shipping software.",
+      "fullDescription": "An open-source command-line tool that automates the boring parts of shipping software: scaffolding, environment checks, deployment previews, and post-deploy verification. Written in Go for fast startup, distributed as a single static binary.\n\nUsed by ~2,000 developers across multiple teams. Featured on the GitHub trending list for a week.",
+      "category": "Open Source",
+      "client": "OSS",
+      "startDate": "2023-04-01",
+      "endDate": null,
+      "status": "published",
+      "publishedAt": "2023-04-15T00:00:00Z",
+      "technologies": ["Go", "GitHub Actions", "Docker", "Shell"],
+      "architecture": "Single Go binary → pluggable subcommands → GitHub Action for CI integration.",
+      "lessonsLearned": "Documentation matters more than features. Adding clear examples tripled weekly active users.",
+      "challenges": "Cross-platform packaging without CI headaches. Settled on GoReleaser after two false starts.",
+      "businessImpact": "2,000+ active developers, 800+ GitHub stars.",
+      "githubUrl": "https://github.com/henockdev/devtool",
+      "liveUrl": null,
+      "featured": false,
+      "pinned": false,
+      "thumbnail": "/projects/devtools.svg",
+      "banner": "/projects/devtools-banner.svg",
+      "media": [
+        { "id": "m1", "type": "image", "url": "/projects/devtools.svg", "alt": "DevTool CLI", "caption": "CLI in action" }
+      ],
+      "metrics": [
+        { "label": "Active devs", "value": "2,000+" },
+        { "label": "GitHub stars", "value": "800+" },
+        { "label": "Cold start", "value": "<50ms" }
+      ],
+      "timeline": [
+        { "label": "Initial release", "date": "2023-04" },
+        { "label": "GitHub Action", "date": "2023-07" },
+        { "label": "Trending", "date": "2023-10" }
+      ],
+      "createdAt": "2023-04-01T00:00:00Z",
+      "updatedAt": "2024-09-01T00:00:00Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_1",
+      "slug": "building-llm-apps-that-survive-production",
+      "title": "Building LLM Apps That Survive Production",
+      "excerpt": "Treat the model like any other unreliable dependency: timeouts, retries, structured outputs, and a graceful path back to humans.",
+      "content": "# Building LLM Apps That Survive Production\n\nMost LLM apps I've seen die in production the same way: the demo works, the first week in production works, and then one day the model hallucinates, the retry loop runs away, and the bill lands.\n\nHere's the playbook I use now.\n\n## 1. Treat the LLM as an unreliable dependency\n\nYour LLM call should look like any other network call:\n\n- **Timeouts**: hard upper bound, e.g. 5 seconds. The model doesn't get to decide when to answer.\n- **Retries**: bounded, with exponential backoff, and a circuit breaker.\n- **Structured outputs**: never trust free-form text. Force JSON, validate it, and reject if it doesn't parse.\n\n## 2. Confidence thresholds beat vibes\n\nThe model tells you how sure it is. Use it. Below 0.7, escalate to a human with full context. Above 0.95, auto-execute. In between, queue for review.\n\n## 3. Log everything\n\nEvery prompt, every completion, every token count, every cost. You'll thank yourself the first time something goes wrong.\n\n## 4. Have a kill switch\n\nA single env var that bypasses the model entirely and falls back to a hardcoded behavior. Test it in staging every deploy.\n\n## 5. Cost is a feature\n\nTrack cost per request. Surface it on a dashboard. Set alerts. The model that costs $0.001 per call looks cheap until you do 10M of them.\n\n---\n\nLLMs are powerful, but they're not magic. The teams that win are the ones that ship them with the same engineering rigor they'd ship a database with.\n",
+      "tags": ["AI", "LLM", "Production", "Architecture"],
+      "category": "Engineering",
+      "readingTime": 5,
+      "published": true,
+      "publishedAt": "2024-09-15T10:00:00Z",
+      "createdAt": "2024-09-15T10:00:00Z",
+      "updatedAt": "2024-09-15T10:00:00Z",
+      "coverImage": "/blog/llm-production.svg"
+    },
+    {
+      "id": "post_2",
+      "slug": "itsm-is-a-software-problem",
+      "title": "ITSM Is a Software Problem",
+      "excerpt": "The teams that treat incident management as a software problem — with code, data, and feedback loops — outperform the ones that treat it as a process problem.",
+      "content": "# ITSM Is a Software Problem\n\nThere's a popular narrative that ITSM is about process: CAB meetings, RACI charts, ITIL books. That's true at the 30,000-foot view.\n\nAt ground level, ITSM is a software problem.\n\n## What does that mean?\n\nIt means:\n\n- Your incident playbook should live in code, not in a Word doc\n- Your change requests should be API objects, not email threads\n- Your post-mortems should be queryable, not PDFs in a folder\n- Your SLA dashboards should be real-time, not monthly reports\n\n## The teams that win\n\nThe teams that win at ITSM treat it like an engineering system. They:\n\n1. **Automate the boring parts.** Ticket triage, on-call rotation, status pages — all automated.\n2. **Measure everything.** MTTR, change failure rate, incident frequency, mean time to detect.\n3. **Close the loop.** Every incident produces a corrective action. Every corrective action has an owner. Every action has a due date.\n4. **Make data visible.** Dashboards that leadership actually opens.\n\n## What changes\n\nWhen you treat ITSM as a software problem, several things happen:\n\n- Your on-call rotations get fair (no more \"same three people\")\n- Your incidents get shorter (because the runbook is right there)\n- Your changes get safer (because the risk is scored, not gut-feel)\n- Your executives get honest (because the data is visible)\n\n---\n\nITSM isn't a process you follow. It's a system you build.\n",
+      "tags": ["ITSM", "DevOps", "SRE"],
+      "category": "ITSM",
+      "readingTime": 4,
+      "published": true,
+      "publishedAt": "2024-08-20T10:00:00Z",
+      "createdAt": "2024-08-20T10:00:00Z",
+      "updatedAt": "2024-08-20T10:00:00Z",
+      "coverImage": "/blog/itsm.svg"
+    },
+    {
+      "id": "post_3",
+      "slug": "why-i-built-this-portfolio",
+      "title": "Why I Built This Portfolio (and What I Learned)",
+      "excerpt": "Notes from shipping a portfolio that's also a CMS, an AI demo, and a stress test of my own taste.",
+      "content": "# Why I Built This Portfolio (and What I Learned)\n\nMost engineer portfolios are static. This one isn't. It has:\n\n- A real admin panel\n- An AI assistant that knows my work\n- A blog with a CMS\n- Live analytics\n- A 3D scene that doesn't tank performance on a 2019 MacBook\n\n## The goal\n\nWhen a recruiter lands here, they should feel that this is the work of someone who sweats the details. When a developer lands here, they should want to read the source.\n\n## What I learned\n\n1. **The admin panel is the product.** The home page is marketing; the admin is the engine. Building the admin first kept the rest honest.\n2. **3D is a tax, not a feature.** Every Three.js line is a performance line. Be ruthless about what you render.\n3. **The AI assistant is mostly retrieval.** Most questions about me are answered by my own content. RAG + a tight prompt is enough.\n4. **Performance budgets aren't optional.** Lighthouse 100 is achievable if you decide it matters before you start.\n\n## What's next\n\nI'll keep writing here about the engineering behind the systems I build. If you want to follow along, the RSS feed is at `/feed.xml`.\n",
+      "tags": ["Meta", "Portfolio", "Engineering"],
+      "category": "Engineering",
+      "readingTime": 3,
+      "published": true,
+      "publishedAt": "2024-10-01T10:00:00Z",
+      "createdAt": "2024-10-01T10:00:00Z",
+      "updatedAt": "2024-10-01T10:00:00Z",
+      "coverImage": "/blog/portfolio.svg"
+    }
+  ]
+}

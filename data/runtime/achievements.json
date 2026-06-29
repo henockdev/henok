@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ach_1",
+    "title": "Innovation Award — Graduate Trainee Cohort",
+    "description": "Won the cohort's top innovation award for an internal automation tool that saved ~12 engineer-hours per week.",
+    "date": "2021-05-01",
+    "category": "Award"
+  },
+  {
+    "id": "ach_2",
+    "title": "Reduced P1 MTTR by 38%",
+    "description": "As ITSM Officer, redesigned incident response playbooks and built the executive SLA dashboard now used org-wide.",
+    "date": "2024-06-15",
+    "category": "Milestone"
+  },
+  {
+    "id": "ach_3",
+    "title": "Open-Source Contributions",
+    "description": "Active contributions in developer tooling, with repos reaching the GitHub trending list.",
+    "date": "2024-09-01",
+    "category": "Recognition"
+  },
+  {
+    "id": "ach_4",
+    "title": "Speaker — Addis Software Engineering Meetup",
+    "description": "Invited talk on building ML-powered features in production web applications.",
+    "date": "2024-11-12",
+    "category": "Speaking"
+  }
+]

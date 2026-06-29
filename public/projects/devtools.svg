@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#10B981" stop-opacity="0.3"/><stop offset="100%" stop-color="#050816"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect x="80" y="80" width="640" height="340" rx="12" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.1)"/>
+  <circle cx="105" cy="105" r="5" fill="#EF4444"/>
+  <circle cx="125" cy="105" r="5" fill="#F59E0B"/>
+  <circle cx="145" cy="105" r="5" fill="#10B981"/>
+  <text x="80" y="170" font-family="JetBrains Mono, monospace" font-size="12" fill="#94A3B8">$ </text>
+  <text x="100" y="170" font-family="JetBrains Mono, monospace" font-size="12" fill="#10B981">devtool init my-project --stack nextjs</text>
+  <text x="80" y="200" font-family="JetBrains Mono, monospace" font-size="11" fill="#94A3B8">✓ Creating project structure…</text>
+  <text x="80" y="220" font-family="JetBrains Mono, monospace" font-size="11" fill="#94A3B8">✓ Installing dependencies…</text>
+  <text x="80" y="240" font-family="JetBrains Mono, monospace" font-size="11" fill="#94A3B8">✓ Setting up CI workflow…</text>
+  <text x="80" y="260" font-family="JetBrains Mono, monospace" font-size="11" fill="#94A3B8">✓ Configuring deployment…</text>
+  <text x="80" y="290" font-family="JetBrains Mono, monospace" font-size="12" fill="#10B981">✓ Done in 4.2s. Happy shipping.</text>
+</svg>

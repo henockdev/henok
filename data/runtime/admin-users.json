@@ -1,0 +1,11 @@
+[
+  {
+    "id": "admin_001",
+    "email": "admin@henok.dev",
+    "name": "Henok",
+    "role": "owner",
+    "twoFactorEnabled": false,
+    "passwordHash": "$2a$10$jS7HQfUlDSXoius0urne7.URQnoalENs8E.orKD3R05AqayiOlhRy",
+    "createdAt": "2026-06-22T06:37:09.736Z"
+  }
+]
