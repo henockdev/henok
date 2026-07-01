@@ -8,9 +8,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node scripts/seed.mjs"
+    "seed": "node scripts/seed.mjs",
+    "build:demo": "node scripts/build-neural-demo.mjs"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.5.1",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.4.0",
     "@types/three": "^0.171.0",

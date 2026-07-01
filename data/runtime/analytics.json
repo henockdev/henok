@@ -1,5 +1,29 @@
 [
   {
+    "id": "evt_mr2i0obs_nmy6eq",
+    "type": "visit",
+    "path": "/",
+    "ref": "",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "createdAt": "2026-07-01T19:58:50.152Z"
+  },
+  {
+    "id": "evt_mr2hz57o_x0ader",
+    "type": "project_view",
+    "path": "/projects/olive-atlas",
+    "ref": "",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "createdAt": "2026-07-01T19:57:38.724Z"
+  },
+  {
+    "id": "evt_mr2hxm8b_hvqx8w",
+    "type": "visit",
+    "path": "/",
+    "ref": "",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "createdAt": "2026-07-01T19:56:27.467Z"
+  },
+  {
     "id": "evt_mqzo3jok_bm5q0y",
     "type": "visit",
     "path": "/",

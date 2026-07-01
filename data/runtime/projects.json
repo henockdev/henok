@@ -1,441 +1,206 @@
 [
   {
-    "id": "proj_smartdesk",
-    "slug": "smartdesk-ai",
-    "title": "SmartDesk AI",
-    "shortDescription": "AI-powered ITSM platform that resolves tier-1 tickets autonomously.",
-    "fullDescription": "SmartDesk AI is an enterprise-grade IT service management platform that uses LLMs and retrieval-augmented generation to resolve tier-1 tickets without human intervention. Built for a banking environment where speed and auditability both matter.\n\nThe system ingests historical ticket data, runbooks, and knowledge base articles into a vector store. When a new ticket arrives, an agent classifies it, retrieves the most relevant runbook, drafts a response, and either auto-resolves or escalates to a human with full context. Every action is logged for audit.\n\nI designed the architecture end-to-end: the Next.js operator console, the FastAPI orchestration layer, the Postgres + pgvector store, and the CI/CD pipeline that ships models behind feature flags.",
-    "category": "AI",
-    "client": "Internal — Banking",
-    "startDate": "2024-01-15",
-    "endDate": "2024-08-30",
-    "status": "published",
-    "publishedAt": "2024-09-01T00:00:00Z",
+    "id": "proj_neural",
+    "slug": "neural-ai-content-studio",
+    "title": "Neural — AI Content Studio",
+    "shortDescription": "A complete, production-ready AI content generation platform — marketing site, full auth, and 8 working authenticated app pages.",
+    "fullDescription": "Neural is an end-to-end AI content studio built for modern content teams that need to ship faster without sacrificing voice. The product ships with a polished marketing site, full authentication flow, and an authenticated application with 8 live pages: dashboard with live analytics widgets, AI Generator workspace with streaming output, a templates library with search and category filters, projects view (grid + list), analytics with charts and funnels, team management with role-based permissions, settings with 7 sections, and billing with plan/usage/invoices.\n\nThe design system is a single source of truth — change once, update everywhere. The whole product is responsive, accessible, and ready to ship. No external API keys or backend required for the demo; everything is wired to land cleanly on top of a real LLM provider when you flip the switch.\n\nI built this as a complete React + Vite + TypeScript + Tailwind application from scratch — routing, layouts, design system, page composition, and the visual polish that makes recruiters stop scrolling.",
+    "category": "Web",
+    "client": "Personal / Portfolio Piece",
+    "startDate": "2025-09-01",
+    "endDate": "2025-11-15",
+    "status": "pinned",
+    "publishedAt": "2025-11-20T00:00:00Z",
     "technologies": [
-      "Next.js",
+      "React 18",
       "TypeScript",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "pgvector",
-      "LangChain",
-      "OpenAI",
-      "Docker",
-      "AWS"
+      "Vite 5",
+      "Tailwind CSS 3",
+      "React Router 6",
+      "Lucide React",
+      "Framer Motion",
+      "Recharts"
     ],
-    "architecture": "Next.js 15 frontend on Vercel → FastAPI orchestration on ECS Fargate → Postgres + pgvector on RDS → S3 for document storage. Async event bus via SQS for ticket ingestion.",
-    "lessonsLearned": "The biggest lesson was treating the LLM as an unreliable component. Every prompt is wrapped in retry logic with structured outputs, and the system degrades gracefully to human-only when the model fails or returns low-confidence answers.",
-    "challenges": "Hallucination on edge-case tickets was the hard problem. Solved it with a combination of constrained decoding, RAG over runbooks, and a confidence threshold that forces human review below ~0.7.",
-    "businessImpact": "Resolved 42% of tier-1 tickets fully autonomously in the first month of pilot. Reduced average resolution time from 4.2 hours to 38 minutes for handled tickets.",
-    "githubUrl": "https://github.com/henockdev/smartdesk-ai",
+    "architecture": "Vite SPA with React Router. Route groups separate marketing (landing/pricing/blog) from authenticated app. Atomic design tokens drive every component. Streaming output simulated via async generators.",
+    "lessonsLearned": "The biggest lesson was treating the design system as code. Centralizing every color, spacing, and typography decision in one file eliminated 80% of UI drift and made 'ship a new page' mean 'compose existing primitives.'",
+    "challenges": "Keeping the marketing site and the authenticated app visually coherent without code duplication. Solved with shared Layout primitives and a single design tokens file.",
+    "businessImpact": "17 product surfaces, 100% responsive, zero external data dependencies. Ready to plug behind any LLM provider and ship as a real product.",
+    "githubUrl": "https://github.com/henockdev/neural",
     "liveUrl": null,
+    "caseStudyUrl": null,
     "featured": true,
     "pinned": true,
-    "thumbnail": "/projects/smartdesk.svg",
-    "banner": "/projects/smartdesk-banner.svg",
+    "thumbnail": "/projects/neural/01-landing.jpg",
+    "banner": "/projects/neural/00-cover.jpg",
     "media": [
-      {
-        "id": "m1",
-        "type": "image",
-        "url": "/projects/smartdesk.svg",
-        "alt": "SmartDesk dashboard",
-        "caption": "Operator console with real-time ticket queue"
-      }
+      { "id": "m1", "type": "image", "url": "/projects/neural/00-cover.jpg", "alt": "Neural cover", "caption": "The AI content studio for teams that ship." },
+      { "id": "m2", "type": "image", "url": "/projects/neural/01-landing.jpg", "alt": "Landing page", "caption": "Hero landing with feature highlights and live generation metrics" },
+      { "id": "m3", "type": "image", "url": "/projects/neural/04-dashboard.jpg", "alt": "Dashboard", "caption": "Authenticated dashboard with live analytics widgets and recent projects" },
+      { "id": "m4", "type": "image", "url": "/projects/neural/05-generator.jpg", "alt": "AI Generator", "caption": "AI Generator workspace with format/tone/length controls and live output streaming" },
+      { "id": "m5", "type": "image", "url": "/projects/neural/07-analytics.jpg", "alt": "Analytics", "caption": "Analytics with charts, funnels, and traffic sources" }
     ],
     "metrics": [
-      {
-        "label": "Auto-resolved tier-1",
-        "value": "42%"
-      },
-      {
-        "label": "Avg resolution time",
-        "value": "38 min"
-      },
-      {
-        "label": "Confidence threshold",
-        "value": "0.70"
-      }
+      { "label": "Screens shipped", "value": "17" },
+      { "label": "Authenticated pages", "value": "8" },
+      { "label": "External deps", "value": "Zero" }
     ],
     "timeline": [
-      {
-        "label": "Architecture & data audit",
-        "date": "2024-01"
-      },
-      {
-        "label": "MVP with hardcoded RAG",
-        "date": "2024-03"
-      },
-      {
-        "label": "Operator console beta",
-        "date": "2024-06"
-      },
-      {
-        "label": "Production pilot",
-        "date": "2024-08"
-      }
+      { "label": "Design system & tokens", "date": "2025-09" },
+      { "label": "Marketing site (3 pages)", "date": "2025-10" },
+      { "label": "Auth flows", "date": "2025-10" },
+      { "label": "Authenticated app (8 pages)", "date": "2025-11" }
     ],
-    "createdAt": "2024-01-15T00:00:00Z",
-    "updatedAt": "2024-09-01T00:00:00Z"
+    "createdAt": "2025-09-01T00:00:00Z",
+    "updatedAt": "2025-11-20T00:00:00Z"
   },
   {
-    "id": "proj_banking_mobile",
-    "slug": "banking-mobile-app",
-    "title": "Banking Mobile App Redesign",
-    "shortDescription": "Mobile-first banking experience with biometric auth and offline mode.",
-    "fullDescription": "Redesigned and rebuilt the customer-facing mobile banking app from scratch. Native-quality UX with biometric login, offline transaction queuing, and a design system that ships features in days, not weeks.\n\nThe architecture uses React Native with a thin native layer for biometric flows and secure storage. Offline transactions are queued in SQLite and synced via a conflict-resolution protocol when connectivity returns. The design system is a single source of truth used across web and mobile.",
-    "category": "Mobile",
-    "client": "Internal — Banking",
-    "startDate": "2023-06-01",
-    "endDate": "2024-01-15",
-    "status": "published",
-    "publishedAt": "2024-01-20T00:00:00Z",
+    "id": "proj_olive_atlas",
+    "slug": "olive-atlas",
+    "title": "Olive & Atlas — Hospitality Operations Platform",
+    "shortDescription": "One calm dashboard for every property in a hospitality group — with an AI copilot that knows the business.",
+    "fullDescription": "Olive & Atlas is a multi-property hospitality operations platform delivered for a four-property New York hospitality group. It isn't a generic template — every screen, every piece of mock data, and every line of microcopy is written for one client.\n\nThe platform ships with 18 live screens spanning auth, daily ops, and settings. The product is built on a strict Atomic Design hierarchy — Atoms, Molecules, Organisms, Layout — so every screen reads consistently and the design system stays maintainable as the product grows.\n\nOlive, the in-product AI copilot, is grounded in the same data the rest of the app shows. She knows the four properties, their cuisines, their managers, their typical weeks, the active suppliers, the recent AI insights, the recent activity. Click Ask Olive in the top bar and you're talking to a copilot that has read the business — not a chatbot with a marketing prompt.\n\nThe design intentionally avoids the standard cyan/violet/magenta neon look because it competes with the warmth of hospitality. Instead it ships a terracotta + cream palette on warm graphite, with Fraunces serif for display, Inter for body, and JetBrains Mono for code. Looks like the front of house feels.",
+    "category": "Enterprise",
+    "client": "Olive & Atlas Hospitality Group",
+    "startDate": "2025-05-01",
+    "endDate": "2025-09-15",
+    "status": "featured",
+    "publishedAt": "2025-09-20T00:00:00Z",
     "technologies": [
-      "React Native",
+      "Next.js 15",
+      "React 19",
       "TypeScript",
-      "Node.js",
-      "PostgreSQL",
-      "Redis",
-      "Firebase"
-    ],
-    "architecture": "React Native app → REST/GraphQL gateway → Node.js services → Postgres primary with read replicas. Biometric auth via native bridge. Secure storage using Keychain (iOS) and EncryptedSharedPreferences (Android).",
-    "lessonsLearned": "Building a real offline-first app is mostly about designing the sync model correctly upfront. We spent more time on conflict resolution than on the UI — and that was the right call.",
-    "challenges": "Compliance: every transaction needs to be auditable end-to-end, and offline mode makes that non-trivial. Solved with a signed transaction queue that is replayed in order when online.",
-    "businessImpact": "Increased mobile DAU by 64% in the first quarter after launch. App store rating went from 2.8 to 4.6.",
-    "githubUrl": null,
-    "liveUrl": null,
-    "featured": true,
-    "pinned": false,
-    "thumbnail": "/projects/banking.svg",
-    "banner": "/projects/banking-banner.svg",
-    "media": [
-      {
-        "id": "m1",
-        "type": "image",
-        "url": "/projects/banking.svg",
-        "alt": "Mobile banking screens",
-        "caption": "Dashboard, transfers, biometric login"
-      }
-    ],
-    "metrics": [
-      {
-        "label": "DAU increase",
-        "value": "+64%"
-      },
-      {
-        "label": "App rating",
-        "value": "4.6 ★"
-      },
-      {
-        "label": "Sync conflicts",
-        "value": "<0.1%"
-      }
-    ],
-    "timeline": [
-      {
-        "label": "Discovery & compliance review",
-        "date": "2023-06"
-      },
-      {
-        "label": "Design system + prototype",
-        "date": "2023-08"
-      },
-      {
-        "label": "Beta with 1k users",
-        "date": "2023-11"
-      },
-      {
-        "label": "GA launch",
-        "date": "2024-01"
-      }
-    ],
-    "createdAt": "2023-06-01T00:00:00Z",
-    "updatedAt": "2024-01-20T00:00:00Z"
-  },
-  {
-    "id": "proj_change_ai",
-    "slug": "change-risk-ai",
-    "title": "Change Risk AI",
-    "shortDescription": "ML model that scores change requests by risk before they hit production.",
-    "fullDescription": "Change Risk AI is a machine learning service that scores every change request submitted to the CAB on a 0–100 risk scale, with explanations. Trained on five years of historical change records, incidents, and post-mortems.\n\nThe model is a gradient-boosted tree ensemble wrapped in a FastAPI service, with a SHAP-based explanation layer so change managers can see *why* a change is flagged. A monitoring dashboard tracks calibration drift and retrains automatically when accuracy drops below threshold.",
-    "category": "AI",
-    "client": "Internal — Banking",
-    "startDate": "2024-03-01",
-    "endDate": "2024-07-15",
-    "status": "published",
-    "publishedAt": "2024-07-20T00:00:00Z",
-    "technologies": [
-      "Python",
-      "FastAPI",
-      "scikit-learn",
-      "XGBoost",
-      "SHAP",
-      "PostgreSQL",
-      "Next.js"
-    ],
-    "architecture": "FastAPI inference service on ECS → feature store in Postgres → training pipeline on SageMaker. SHAP explanations computed at inference time and surfaced in the Next.js CAB console.",
-    "lessonsLearned": "Explainability mattered more than raw accuracy. Change managers wouldn't act on the score unless they understood the reason. SHAP was non-negotiable.",
-    "challenges": "Class imbalance (most changes are low-risk). Solved with SMOTE + cost-sensitive learning and a calibration layer that maps raw scores to a 0–100 scale.",
-    "businessImpact": "Reduced change failure rate from 12% to 5% within six months. CAB meetings cut from 90 to 45 minutes.",
-    "githubUrl": "https://github.com/henockdev/change-risk-ai",
-    "liveUrl": null,
-    "featured": true,
-    "pinned": false,
-    "thumbnail": "/projects/change-risk.svg",
-    "banner": "/projects/change-risk-banner.svg",
-    "media": [
-      {
-        "id": "m1",
-        "type": "image",
-        "url": "/projects/change-risk.svg",
-        "alt": "Risk dashboard",
-        "caption": "Risk scoring dashboard with SHAP explanations"
-      }
-    ],
-    "metrics": [
-      {
-        "label": "Change failure rate",
-        "value": "5%"
-      },
-      {
-        "label": "AUC",
-        "value": "0.91"
-      },
-      {
-        "label": "CAB meeting time",
-        "value": "-50%"
-      }
-    ],
-    "timeline": [
-      {
-        "label": "Data audit & labeling",
-        "date": "2024-03"
-      },
-      {
-        "label": "Model v1 + offline eval",
-        "date": "2024-05"
-      },
-      {
-        "label": "CAB pilot with shadow mode",
-        "date": "2024-06"
-      },
-      {
-        "label": "GA with monitoring",
-        "date": "2024-07"
-      }
-    ],
-    "createdAt": "2024-03-01T00:00:00Z",
-    "updatedAt": "2024-07-20T00:00:00Z"
-  },
-  {
-    "id": "proj_opsboard",
-    "slug": "opsboard",
-    "title": "OpsBoard",
-    "shortDescription": "Executive SLA dashboard for IT operations — built to be used, not just admired.",
-    "fullDescription": "OpsBoard is the executive-facing SLA dashboard for the IT org. Pulls data from ServiceNow, Grafana, and incident logs, and surfaces the metrics leadership actually cares about: availability, MTTR, change failure rate, top recurring incidents.\n\nDesigned to be the first tab opened in the morning — fast, dense, and honest. Built with Next.js and a streaming data layer so charts update in real time during incidents.",
-    "category": "Web",
-    "client": "Internal — Banking",
-    "startDate": "2023-09-01",
-    "endDate": "2023-12-15",
-    "status": "published",
-    "publishedAt": "2023-12-20T00:00:00Z",
-    "technologies": [
-      "Next.js",
-      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
       "Recharts",
-      "ServiceNow API",
-      "Grafana",
-      "WebSockets"
+      "Atomic Design",
+      "Fraunces + Inter"
     ],
-    "architecture": "Next.js dashboard → BFF aggregating ServiceNow + Grafana APIs → Postgres cache → WebSocket stream for live incident updates.",
-    "lessonsLearned": "An executive dashboard only works if it shows *one* thing per chart. Resist the urge to cram.",
-    "challenges": "Different data sources had different time zones and update cadences. Built a normalization layer that anchors everything to UTC and reconciles updates with a watermark.",
-    "businessImpact": "Adopted across the IT org. Cited as the single most useful internal tool in the next quarterly survey.",
+    "architecture": "Next.js App Router with route groups (auth) and (dashboard). Atomic Design component hierarchy. Mock data in typed lib/mockData.ts ready to swap for real API hooks. Server-rendered shell, client-rendered dashboards.",
+    "lessonsLearned": "Hospitality dashboards look more like magazines than SaaS. The terracotta/cream/warm-graphite palette was a deliberate rejection of generic dashboard neon — it makes the product feel like it belongs in the businesses it serves.",
+    "challenges": "Designing for four properties without four versions. Built a strict design system with property-color slots that any screen can theme per-property without duplicating layouts.",
+    "businessImpact": "18 live screens, full Atomic Design system, AI copilot grounded in real data. Designed for one client, easy to re-theme for the next.",
     "githubUrl": null,
     "liveUrl": null,
-    "featured": false,
+    "caseStudyUrl": null,
+    "featured": true,
     "pinned": false,
-    "thumbnail": "/projects/opsboard.svg",
-    "banner": "/projects/opsboard-banner.svg",
+    "thumbnail": "/projects/olive-atlas/hero.svg",
+    "banner": "/projects/olive-atlas/hero.svg",
     "media": [
-      {
-        "id": "m1",
-        "type": "image",
-        "url": "/projects/opsboard.svg",
-        "alt": "OpsBoard",
-        "caption": "Executive SLA overview"
-      }
+      { "id": "m1", "type": "image", "url": "/projects/olive-atlas/hero.svg", "alt": "Olive & Atlas dashboard", "caption": "One calm dashboard for every property in your group" }
     ],
     "metrics": [
-      {
-        "label": "Adoption",
-        "value": "100% of IT org"
-      },
-      {
-        "label": "Time to insight",
-        "value": "2 sec"
-      },
-      {
-        "label": "Live updates",
-        "value": "Real-time"
-      }
+      { "label": "Live screens", "value": "18" },
+      { "label": "Properties covered", "value": "4" },
+      { "label": "AI insights shipped", "value": "6" }
     ],
     "timeline": [
-      {
-        "label": "Stakeholder interviews",
-        "date": "2023-09"
-      },
-      {
-        "label": "MVP",
-        "date": "2023-10"
-      },
-      {
-        "label": "Realtime layer",
-        "date": "2023-11"
-      },
-      {
-        "label": "Org-wide launch",
-        "date": "2023-12"
-      }
+      { "label": "Discovery & data audit", "date": "2025-05" },
+      { "label": "Design system (Atomic)", "date": "2025-06" },
+      { "label": "Daily ops screens", "date": "2025-07" },
+      { "label": "Olive copilot", "date": "2025-08" },
+      { "label": "Settings & polish", "date": "2025-09" }
     ],
-    "createdAt": "2023-09-01T00:00:00Z",
-    "updatedAt": "2023-12-20T00:00:00Z"
+    "createdAt": "2025-05-01T00:00:00Z",
+    "updatedAt": "2025-09-20T00:00:00Z"
   },
   {
-    "id": "proj_kbsearch",
-    "slug": "kb-semantic-search",
-    "title": "KB Semantic Search",
-    "shortDescription": "Semantic search over the IT knowledge base — find the runbook in seconds.",
-    "fullDescription": "Semantic search over an internal IT knowledge base of ~5,000 articles. Replaced keyword search with a sentence-transformer-based dense retrieval system. Users describe the problem in natural language and get the most relevant runbook, not just the one with the right keywords.\n\nBuilt with sentence-transformers, FAISS, and a Next.js search UI that surfaces results with the matching section highlighted.",
+    "id": "proj_temari_ai",
+    "slug": "temari-ai",
+    "title": "TemariAi — AI Tutor for African Students",
+    "shortDescription": "ተማሪ AI — Solves Math, Physics, and Chemistry problems step-by-step, with social learning built in.",
+    "fullDescription": "TemariAi (ተማሪ AI, meaning 'Student AI' in Amharic) is an educational platform that makes AI tutoring accessible to African students. The platform solves Math, Physics, Chemistry, and conceptual problems with step-by-step explanations, then gamifies the experience with XP, battles, quests, and achievements.\n\nThe backend is a FastAPI service with dedicated solvers per subject, vision AI for handwritten problem parsing via Gemini Vision, and Groq-powered explanation engines that turn raw solutions into student-friendly language. Supabase handles persistence, Firebase handles auth, and a native Android client ships for primary device reach.\n\nThe social layer is real: leaderboards, friends, groups, AI-driven quest generation, and battle-style problem challenges. Students aren't just solving problems — they're connecting, competing, and forming study groups.\n\nBuilt end-to-end: FastAPI backend, AI orchestration layer, Supabase schemas, the backend tests, Docker compose, and the Android Kotlin client.",
     "category": "AI",
-    "client": "Internal — Banking",
-    "startDate": "2024-04-15",
-    "endDate": "2024-06-30",
-    "status": "published",
-    "publishedAt": "2024-07-01T00:00:00Z",
+    "client": "Personal / Social Impact",
+    "startDate": "2025-01-15",
+    "endDate": null,
+    "status": "featured",
+    "publishedAt": "2025-04-01T00:00:00Z",
     "technologies": [
-      "Python",
       "FastAPI",
-      "sentence-transformers",
-      "FAISS",
-      "Next.js",
-      "TypeScript"
+      "Python 3.11",
+      "Supabase (Postgres)",
+      "Firebase Auth",
+      "Gemini Vision",
+      "Groq",
+      "Android (Kotlin)",
+      "Docker"
     ],
-    "architecture": "sentence-transformers indexer runs nightly → FAISS index stored in S3 → FastAPI retrieval service → Next.js UI.",
-    "lessonsLearned": "Hybrid search (BM25 + dense) beat pure dense retrieval by a wide margin. Keyword signals still matter, especially for error codes and product names.",
-    "challenges": "Keeping the index fresh without rebuilding from scratch nightly. Used a delta-update pipeline that ingests only changed articles.",
-    "businessImpact": "Average time to find a runbook dropped from 6 minutes to 28 seconds. Self-service rate on tier-1 issues increased by 31%.",
-    "githubUrl": "https://github.com/henockdev/kb-search",
+    "architecture": "FastAPI backend with subject-specific solvers (chemistry_solver, math_solver, physics_solver) orchestrated by solver_orchestrator. AI services split into gemini_vision (image→problem), problem_classifier (route to subject), groq_explanation (raw→student-friendly). Supabase for persistence, Firebase for auth tokens, Android (Kotlin) for mobile client.",
+    "lessonsLearned": "A student tutor that just gives answers is a calculator with extra steps. The real product is the explanation layer: turn a black-box solution into something a student can read, follow, and learn from.",
+    "challenges": "Handwritten math notation is genuinely hard for vision models. Solved with a two-stage pipeline: Gemini Vision extracts a symbolic representation, then the math_solver evaluates it — never letting the LLM do arithmetic.",
+    "businessImpact": "Math, Physics, and Chemistry tutors in one app. Free to use, built to scale, designed for the connectivity realities of African students (offline-friendly Android client).",
+    "githubUrl": "https://github.com/henockdev/temari-ai",
     "liveUrl": null,
-    "featured": false,
+    "caseStudyUrl": null,
+    "featured": true,
     "pinned": false,
-    "thumbnail": "/projects/kb.svg",
-    "banner": "/projects/kb-banner.svg",
+    "thumbnail": "/projects/temari-ai/hero.svg",
+    "banner": "/projects/temari-ai/hero.svg",
     "media": [
-      {
-        "id": "m1",
-        "type": "image",
-        "url": "/projects/kb.svg",
-        "alt": "KB search",
-        "caption": "Semantic search UI"
-      }
+      { "id": "m1", "type": "image", "url": "/projects/temari-ai/hero.svg", "alt": "TemariAi — Student AI tutor", "caption": "AI tutor solving math, physics, and chemistry step-by-step" }
     ],
     "metrics": [
-      {
-        "label": "Time to find runbook",
-        "value": "28 sec"
-      },
-      {
-        "label": "Self-service tier-1",
-        "value": "+31%"
-      },
-      {
-        "label": "Recall@10",
-        "value": "0.88"
-      }
+      { "label": "Subject solvers", "value": "3" },
+      { "label": "Vision → solver", "value": "2-stage" },
+      { "label": "Platforms", "value": "Mobile + API" }
     ],
     "timeline": [
-      {
-        "label": "Indexing pipeline",
-        "date": "2024-04"
-      },
-      {
-        "label": "Retrieval service MVP",
-        "date": "2024-05"
-      },
-      {
-        "label": "UI + hybrid search",
-        "date": "2024-06"
-      }
+      { "label": "Backend & solvers", "date": "2025-01" },
+      { "label": "AI orchestration", "date": "2025-02" },
+      { "label": "Supabase + Firebase", "date": "2025-03" },
+      { "label": "Android client", "date": "2025-04" }
     ],
-    "createdAt": "2024-04-15T00:00:00Z",
-    "updatedAt": "2024-07-01T00:00:00Z"
+    "createdAt": "2025-01-15T00:00:00Z",
+    "updatedAt": "2025-04-01T00:00:00Z"
   },
   {
-    "id": "proj_devtools",
-    "slug": "devtooling-cli",
-    "title": "DevTooling CLI",
-    "shortDescription": "Open-source CLI that automates the boring parts of shipping software.",
-    "fullDescription": "An open-source command-line tool that automates the boring parts of shipping software: scaffolding, environment checks, deployment previews, and post-deploy verification. Written in Go for fast startup, distributed as a single static binary.\n\nUsed by ~2,000 developers across multiple teams. Featured on the GitHub trending list for a week.",
-    "category": "Open Source",
-    "client": "OSS",
-    "startDate": "2023-04-01",
-    "endDate": null,
+    "id": "proj_op_square",
+    "slug": "op-square-gateway",
+    "title": "OP Square Gateway — WooCommerce Plugin",
+    "shortDescription": "Custom Square Web Payments checkout for OPeptides — page-scoped assets, AJAX coupons, minimal Square data payload.",
+    "fullDescription": "OP Square Gateway is a WordPress/WooCommerce payment gateway plugin that integrates Square Web Payments into the OPeptides checkout flow with surgical precision. Square only ever sees (amount, location_id, order_number, 'Online order') — no product names, SKUs, or peptide identifiers ever leave the server.\n\nThe plugin handles the boring parts that nobody else does right: page-scoped asset enqueuing so the Square SDK only loads on the checkout page, AJAX-driven coupon apply/remove with WooCommerce coupon engine, a CartFlows-compatible 'Pay with Credit Card' CTA, server-side CreatePayment calls, and signed webhook handlers for the asynchronous payment lifecycle.\n\nI wrote this plugin from scratch in object-oriented PHP, with a singleton main class that loads the gateway class only when WooCommerce's payment gateways array is being built — never at boot. Self-healing cache logic clears stale payment-page caches from earlier buggy versions.\n\nv1.1.11 ships to OPeptides production.",
+    "category": "Enterprise",
+    "client": "OPeptides",
+    "startDate": "2024-09-01",
+    "endDate": "2025-02-28",
     "status": "published",
-    "publishedAt": "2023-04-15T00:00:00Z",
+    "publishedAt": "2025-03-05T00:00:00Z",
     "technologies": [
-      "Go",
-      "GitHub Actions",
-      "Docker",
-      "Shell"
+      "PHP 7.4+",
+      "WordPress",
+      "WooCommerce",
+      "Square Web Payments SDK",
+      "JavaScript (ES2021)",
+      "WC Payment Gateway API",
+      "CartFlows"
     ],
-    "architecture": "Single Go binary → pluggable subcommands → GitHub Action for CI integration.",
-    "lessonsLearned": "Documentation matters more than features. Adding clear examples tripled weekly active users.",
-    "challenges": "Cross-platform packaging without CI headaches. Settled on GoReleaser after two false starts.",
-    "businessImpact": "2,000+ active developers, 800+ GitHub stars.",
-    "githubUrl": "https://github.com/henockdev/devtool",
-    "liveUrl": null,
-    "featured": false,
+    "architecture": "Singleton plugin class instantiated at plugins_loaded priority 99 (after WC). Gateway class loaded lazily inside register_gateway() right before the WC gateways array is built. WP AJAX handlers for coupon + payment flow. WC legacy webhook endpoint for async payment events.",
+    "lessonsLearned": "The hardest part of any payment integration isn't the API call — it's the boot order. Load too early and you break when WC isn't active. Load too late and your gateway isn't registered. Solution: lazy-load the gateway class only inside the gateways array hook.",
+    "challenges": "CartFlows uses a custom template that doesn't fire standard WC checkout hooks, so the standard 'Pay with...' CTA doesn't render. Solved with a hybrid approach: PHP hooks where WC works, JS injection where CartFlows owns the page.",
+    "businessImpact": "Live in OPeptides production. Square only ever sees minimal order data, zero PII leakage. Plugin handles apply/remove coupons, server-side CreatePayment, signed webhooks.",
+    "githubUrl": null,
+    "liveUrl": "https://opeptides.com",
+    "caseStudyUrl": null,
+    "featured": true,
     "pinned": false,
-    "thumbnail": "/projects/devtools.svg",
-    "banner": "/projects/devtools-banner.svg",
+    "thumbnail": "/projects/op-square/hero.svg",
+    "banner": "/projects/op-square/hero.svg",
     "media": [
-      {
-        "id": "m1",
-        "type": "image",
-        "url": "/projects/devtools.svg",
-        "alt": "DevTool CLI",
-        "caption": "CLI in action"
-      }
+      { "id": "m1", "type": "image", "url": "/projects/op-square/hero.svg", "alt": "OP Square Gateway", "caption": "Custom Square Web Payments gateway for WooCommerce" }
     ],
     "metrics": [
-      {
-        "label": "Active devs",
-        "value": "2,000+"
-      },
-      {
-        "label": "GitHub stars",
-        "value": "800+"
-      },
-      {
-        "label": "Cold start",
-        "value": "<50ms"
-      }
+      { "label": "Plugin version", "value": "v1.1.11" },
+      { "label": "Square data fields", "value": "4 only" },
+      { "label": "Boot deps", "value": "0 at init" }
     ],
     "timeline": [
-      {
-        "label": "Initial release",
-        "date": "2023-04"
-      },
-      {
-        "label": "GitHub Action",
-        "date": "2023-07"
-      },
-      {
-        "label": "Trending",
-        "date": "2023-10"
-      }
+      { "label": "Gateway scaffolding", "date": "2024-09" },
+      { "label": "Square Web Pay integration", "date": "2024-11" },
+      { "label": "CartFlows compatibility", "date": "2025-01" },
+      { "label": "Production deploy", "date": "2025-02" }
     ],
-    "createdAt": "2023-04-01T00:00:00Z",
-    "updatedAt": "2024-09-01T00:00:00Z"
+    "createdAt": "2024-09-01T00:00:00Z",
+    "updatedAt": "2025-03-05T00:00:00Z"
   }
 ]

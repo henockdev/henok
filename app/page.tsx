@@ -1,12 +1,14 @@
 import { HeroEnhanced } from '@/components/hero/HeroEnhanced';
 import { About } from '@/components/sections/About';
 import { SkillsDashboardEnhanced } from '@/components/sections/SkillsEnhanced';
-import { ProjectsShowcaseEnhanced } from '@/components/sections/ProjectsEnhanced';
+import { ProjectsShowcase } from '@/components/sections/Projects';
 import { ExperienceTimeline } from '@/components/sections/Experience';
 import { Achievements } from '@/components/sections/Achievements';
 import { GithubStats } from '@/components/sections/GithubStats';
 import { ContactSection } from '@/components/sections/Contact';
 import { BlogPreview } from '@/components/blog/BlogPreview';
+import { DemoBooth } from '@/components/sections/DemoBooth';
+import { AIDemoSection } from '@/components/sections/AIDemoSection';
 import { store } from '@/lib/data/store';
 import { fetchGitHubSummary } from '@/lib/data/github';
 
@@ -30,8 +32,8 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Enhanced Hero Section with animations and floating particles */}
-      <HeroEnhanced />
+      {/* Enhanced Hero Section with 3D project carousel */}
+      <HeroEnhanced projects={publishedProjects} />
 
       {/* About Section - Shows your story and background */}
       <About />
@@ -39,8 +41,14 @@ export default async function HomePage() {
       {/* Enhanced Skills Dashboard with 3D effects and progress animations */}
       <SkillsDashboardEnhanced skills={skills} />
 
+      {/* LIVE DEMO BOOTH — embedded Neural (full interactive product) */}
+      <DemoBooth />
+
+      {/* AI Assistant — "Try my AI" hero feature */}
+      <AIDemoSection />
+
       {/* Enhanced Projects Showcase with search, filters, and hover effects */}
-      <ProjectsShowcaseEnhanced projects={publishedProjects} />
+      <ProjectsShowcase projects={publishedProjects} />
 
       {/* Experience Timeline - Shows your career journey */}
       <ExperienceTimeline experiences={experiences} />

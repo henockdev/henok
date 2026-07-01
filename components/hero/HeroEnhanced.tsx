@@ -6,11 +6,12 @@ import Link from 'next/link';
 import { ArrowDown, Download, Briefcase, Sparkles, Zap, Github, Linkedin, Twitter } from 'lucide-react';
 import { TypingAnimation } from './TypingAnimation';
 import { GlowingOrbs } from './GlowingOrbs';
+import type { Project } from '@/lib/types';
 
-const HeroScene = dynamic(() => import('@/components/three/HeroScene').then((m) => m.HeroScene), {
-  ssr: false,
-  loading: () => null,
-});
+const ProjectCarousel3D = dynamic(
+  () => import('@/components/three/ProjectCarousel3D').then((m) => m.ProjectCarousel3D),
+  { ssr: false, loading: () => null },
+);
 
 const roles = ['Software Engineer', 'AI Developer', 'Mobile Developer', 'ITSM Professional'];
 
@@ -43,10 +44,30 @@ const itemVariants = {
   },
 };
 
-export function HeroEnhanced() {
+const CATEGORY_ACCENT: Record<string, string> = {
+  AI: '#A78BFA',
+  Web: '#38BDF8',
+  Mobile: '#C084FC',
+  ITSM: '#F87171',
+  Automation: '#FBBF24',
+  'Open Source': '#34D399',
+  Enterprise: '#C4674A',
+  Freelance: '#F472B6',
+  Research: '#22D3EE',
+  Personal: '#94A3B8',
+};
+
+export function HeroEnhanced({ projects = [] }: { projects?: Project[] }) {
+  const carouselProjects = projects.slice(0, 4).map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    category: p.category,
+    thumb: p.thumbnail || '/projects/neural/00-cover.jpg',
+    accent: CATEGORY_ACCENT[p.category] || '#38BDF8',
+  }));
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      <HeroScene />
+      {carouselProjects.length > 0 && <ProjectCarousel3D projects={carouselProjects} />}
       <GlowingOrbs />
 
       {/* Enhanced vignette with gradient */}

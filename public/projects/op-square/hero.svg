@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="OP Square Gateway — WordPress WooCommerce payment plugin">
+  <defs>
+    <linearGradient id="op-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="op-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D1A1"/>
+      <stop offset="100%" stop-color="#0F9D72"/>
+    </linearGradient>
+    <linearGradient id="op-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="op-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#34D1A1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#op-bg)"/>
+
+  <!-- Subtle radial glow -->
+  <g opacity="0.18">
+    <circle cx="950" cy="220" r="240" fill="url(#op-green)"/>
+    <circle cx="180" cy="640" r="220" fill="url(#op-blue)"/>
+  </g>
+
+  <!-- Header band -->
+  <g transform="translate(0,40)">
+    <text x="80" y="40" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="2">OPeptides · CHECKOUT</text>
+    <text x="80" y="64" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12">Secure payment via OP Square Gateway</text>
+    <g transform="translate(1080,28)">
+      <circle r="6" fill="#34D1A1"/>
+      <text x="-14" y="4" text-anchor="end" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11">Secured</text>
+    </g>
+  </g>
+
+  <!-- Card -->
+  <g transform="translate(80,160)">
+    <rect width="540" height="540" rx="20" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <text x="40" y="56" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="22" font-weight="600">Order summary</text>
+    <text x="40" y="78" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13">Square only sees amount + order number</text>
+
+    <!-- Item rows -->
+    <g transform="translate(40,120)" font-family="Inter, sans-serif">
+      <rect width="460" height="56" rx="10" fill="#0B1120" stroke="#1E293B"/>
+      <circle cx="32" cy="28" r="14" fill="url(#op-blue)"/>
+      <text x="32" y="33" text-anchor="middle" fill="#0B1120" font-size="13" font-weight="700">P</text>
+      <text x="62" y="24" fill="#FFFFFF" font-size="13" font-weight="500">Product A · 30ml</text>
+      <text x="62" y="42" fill="#94A3B8" font-size="11">Qty 1 · Standard shipping</text>
+      <text x="438" y="34" text-anchor="end" fill="#FFFFFF" font-size="14" font-weight="600">$48.00</text>
+    </g>
+    <g transform="translate(40,184)" font-family="Inter, sans-serif">
+      <rect width="460" height="56" rx="10" fill="#0B1120" stroke="#1E293B"/>
+      <circle cx="32" cy="28" r="14" fill="url(#op-green)"/>
+      <text x="32" y="33" text-anchor="middle" fill="#0B1120" font-size="13" font-weight="700">S</text>
+      <text x="62" y="24" fill="#FFFFFF" font-size="13" font-weight="500">Product B · 60ml</text>
+      <text x="62" y="42" fill="#94A3B8" font-size="11">Qty 2 · Express shipping</text>
+      <text x="438" y="34" text-anchor="end" fill="#FFFFFF" font-size="14" font-weight="600">$132.00</text>
+    </g>
+
+    <!-- Totals -->
+    <g transform="translate(40,280)" font-family="Inter, sans-serif" font-size="13">
+      <text x="0" y="0" fill="#94A3B8">Subtotal</text>
+      <text x="460" y="0" text-anchor="end" fill="#FFFFFF">$180.00</text>
+      <text x="0" y="28" fill="#94A3B8">Shipping</text>
+      <text x="460" y="28" text-anchor="end" fill="#FFFFFF">$8.50</text>
+      <text x="0" y="56" fill="#94A3B8">Tax</text>
+      <text x="460" y="56" text-anchor="end" fill="#FFFFFF">$15.30</text>
+      <line x1="0" y1="76" x2="460" y2="76" stroke="#1E293B"/>
+      <text x="0" y="106" fill="#FFFFFF" font-size="16" font-weight="600">Total</text>
+      <text x="460" y="106" text-anchor="end" fill="#34D1A1" font-size="22" font-weight="700">$203.80</text>
+    </g>
+
+    <!-- CTA -->
+    <g transform="translate(40,440)">
+      <rect width="460" height="56" rx="28" fill="url(#op-grad)"/>
+      <text x="230" y="35" text-anchor="middle" fill="#0B1120" font-family="Inter, sans-serif" font-size="15" font-weight="700">Pay $203.80 with Square</text>
+    </g>
+    <text x="270" y="520" text-anchor="middle" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">Powered by OP Square Gateway · v1.1.11</text>
+  </g>
+
+  <!-- Right info panel -->
+  <g transform="translate(660,160)">
+    <rect width="460" height="540" rx="20" fill="#0F172A" stroke="#1E293B"/>
+    <g transform="translate(40,40)">
+      <!-- Stack logo -->
+      <rect width="60" height="60" rx="14" fill="url(#op-green)"/>
+      <text x="30" y="40" text-anchor="middle" fill="#0B1120" font-family="Inter, sans-serif" font-size="22" font-weight="800">$</text>
+
+      <text x="80" y="32" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="18" font-weight="600">OP Square Gateway</text>
+      <text x="80" y="52" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12">Custom WooCommerce payment gateway</text>
+
+      <!-- stats -->
+      <g transform="translate(0,100)">
+        <rect width="120" height="100" rx="12" fill="#0B1120" stroke="#1E293B"/>
+        <text x="14" y="28" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" letter-spacing="1.5">VERSION</text>
+        <text x="14" y="68" fill="#34D1A1" font-family="Inter, sans-serif" font-size="22" font-weight="700">1.1.11</text>
+
+        <rect x="140" width="120" height="100" rx="12" fill="#0B1120" stroke="#1E293B"/>
+        <text x="154" y="28" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" letter-spacing="1.5">SQUARE FIELDS</text>
+        <text x="154" y="68" fill="#22D3EE" font-family="Inter, sans-serif" font-size="22" font-weight="700">4 only</text>
+
+        <rect x="280" width="100" height="100" rx="12" fill="#0B1120" stroke="#1E293B"/>
+        <text x="294" y="28" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" letter-spacing="1.5">DEP LOADED</text>
+        <text x="294" y="68" fill="#22D3EE" font-family="Inter, sans-serif" font-size="22" font-weight="700">0</text>
+      </g>
+
+      <!-- Features -->
+      <g transform="translate(0,228)" font-family="Inter, sans-serif" font-size="12">
+        <g transform="translate(0,0)">
+          <circle cx="6" cy="6" r="6" fill="url(#op-green)"/>
+          <text x="22" y="10" fill="#FFFFFF">Page-scoped asset enqueuing</text>
+        </g>
+        <g transform="translate(0,32)">
+          <circle cx="6" cy="6" r="6" fill="url(#op-green)"/>
+          <text x="22" y="10" fill="#FFFFFF">AJAX coupon apply/remove</text>
+        </g>
+        <g transform="translate(0,64)">
+          <circle cx="6" cy="6" r="6" fill="url(#op-green)"/>
+          <text x="22" y="10" fill="#FFFFFF">Server-side CreatePayment</text>
+        </g>
+        <g transform="translate(0,96)">
+          <circle cx="6" cy="6" r="6" fill="url(#op-green)"/>
+          <text x="22" y="10" fill="#FFFFFF">Signed webhooks (WC legacy)</text>
+        </g>
+        <g transform="translate(0,128)">
+          <circle cx="6" cy="6" r="6" fill="url(#op-green)"/>
+          <text x="22" y="10" fill="#FFFFFF">CartFlows compatible CTA</text>
+        </g>
+        <g transform="translate(0,160)">
+          <circle cx="6" cy="6" r="6" fill="url(#op-green)"/>
+          <text x="22" y="10" fill="#FFFFFF">Self-healing payment cache</text>
+        </g>
+      </g>
+
+      <!-- Code snippet -->
+      <g transform="translate(0,410)" font-family="JetBrains Mono, monospace" font-size="10">
+        <rect width="380" height="76" rx="10" fill="#050816" stroke="#1E293B"/>
+        <text x="14" y="22" fill="#94A3B8">// Square only ever sees...</text>
+        <text x="14" y="40" fill="#34D1A1">{ amount: 20380, locationId,</text>
+        <text x="14" y="58" fill="#34D1A1">  orderNumber, 'Online order' }</text>
+        <text x="14" y="76" fill="#22D3EE">// Zero PII leaves the server.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom label -->
+  <g transform="translate(0,750)" font-family="Inter, sans-serif">
+    <text x="600" y="0" text-anchor="middle" fill="#94A3B8" font-size="12">op-square-gateway · WordPress &amp; WooCommerce</text>
+  </g>
+</svg>
