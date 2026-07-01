@@ -1,11 +1,10 @@
 'use client';
 
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
-import { forwardRef, useEffect, useMemo, useRef, useState, Suspense } from 'react';
+import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
 import * as THREE from 'three';
 import { useRouter } from 'next/navigation';
-import { TextureLoader } from 'three';
 
 /**
  * ProjectCarousel3D
@@ -122,8 +121,55 @@ function Tile({
 }
 
 function ImageTile({ index, total, tile, angle }: { index: number; total: number; tile: ProjectTile; angle: number }) {
-  // Use useLoader to load texture. Need to be inside Suspense.
-  const texture = useLoader(TextureLoader, tile.thumb);
+  // THREE.TextureLoader doesn't speak SVG — and crashes the whole scene when
+  // it can't decode one. Route every thumbnail through an <img> → canvas →
+  // CanvasTexture pipeline instead. Browsers handle SVG natively, JPG/PNG too,
+  // and we never throw: a broken asset falls back to a coloured tile.
+  const [texture, setTexture] = useState<THREE.Texture | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.decoding = 'async';
+    img.onload = () => {
+      if (cancelled) return;
+      const w = img.naturalWidth || 512;
+      const h = img.naturalHeight || 320;
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      // For SVG without intrinsic size, browsers report 0; give it a sane box.
+      ctx.clearRect(0, 0, w, h);
+      ctx.drawImage(img, 0, 0, w, h);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      tex.needsUpdate = true;
+      setTexture(tex);
+    };
+    img.onerror = () => {
+      // Swallow — render a coloured card without texture.
+      if (cancelled) return;
+      const canvas = document.createElement('canvas');
+      canvas.width = 512;
+      canvas.height = 320;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      ctx.fillStyle = tile.accent;
+      ctx.fillRect(0, 0, 512, 320);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.needsUpdate = true;
+      setTexture(tex);
+    };
+    img.src = tile.thumb;
+    return () => {
+      cancelled = true;
+    };
+  }, [tile.thumb, tile.accent]);
+
+  if (!texture) return null;
   return <Tile index={index} total={total} tile={tile} angle={angle} texture={texture} />;
 }
 
@@ -149,11 +195,7 @@ function Carousel({
     <group ref={groupRef} position={[0, -1.2, 0]}>
       {projects.map((p, i) => {
         const angle = (i / projects.length) * Math.PI * 2;
-        return (
-          <Suspense key={p.slug} fallback={null}>
-            <ImageTile index={i} total={projects.length} tile={p} angle={angle} />
-          </Suspense>
-        );
+        return <ImageTile key={p.slug} index={i} total={projects.length} tile={p} angle={angle} />;
       })}
     </group>
   );
@@ -229,15 +271,44 @@ export function ProjectCarousel3D({ projects }: ProjectCarouselProps) {
 
   return (
     <div className="absolute inset-0 pointer-events-none">
-      <Canvas
-        camera={{ position: [0, 0, 7.5], fov: 50 }}
-        dpr={[1, 1.6]}
-        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
-      >
-        <Lights />
-        <DragController rotationY={rotationY} dragging={dragging} />
-        <Carousel projects={projects} rotationY={rotationY} dragging={dragging} />
-      </Canvas>
+      <CanvasErrorBoundary>
+        <Canvas
+          camera={{ position: [0, 0, 7.5], fov: 50 }}
+          dpr={[1, 1.6]}
+          gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
+          onCreated={({ gl }) => {
+            gl.setClearColor(0x000000, 0);
+          }}
+        >
+          <Lights />
+          <DragController rotationY={rotationY} dragging={dragging} />
+          <Carousel projects={projects} rotationY={rotationY} dragging={dragging} />
+        </Canvas>
+      </CanvasErrorBoundary>
     </div>
   );
+}
+
+/**
+ * CanvasErrorBoundary
+ * A single failed texture used to nuke the whole hero (and the page).
+ * This catches anything thrown inside the 3D tree and quietly degrades
+ * to a no-op — the rest of the hero text/buttons/carousel stay alive.
+ */
+class CanvasErrorBoundary extends Component<
+  { children: ReactNode },
+  { hasError: boolean }
+> {
+  state = { hasError: false };
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: unknown) {
+    // eslint-disable-next-line no-console
+    console.warn('[ProjectCarousel3D] 3D scene crashed, falling back:', error);
+  }
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
 }
