@@ -93,13 +93,19 @@ export function HeroEnhanced({ projects = [] }: { projects?: Project[] }) {
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(5)].map((_, i) => (
+        {[
+          { left: 21.4, top: 38.4 },
+          { left: 97.5, top: 98.4 },
+          { left: 52.5, top: 1.5 },
+          { left: 34.9, top: 72.4 },
+          { left: 27.6, top: 11.9 },
+        ].map((p, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 rounded-full bg-blue-500/40"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${p.left}%`,
+              top: `${p.top}%`,
             }}
             animate={{
               y: [0, -100 - i * 50, 0],
