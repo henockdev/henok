@@ -6,8 +6,12 @@ import Link from 'next/link';
 import { ArrowDown, Download, Briefcase, Sparkles, Zap, Github, Linkedin, Twitter } from 'lucide-react';
 import { TypingAnimation } from './TypingAnimation';
 import { GlowingOrbs } from './GlowingOrbs';
+import { useReducedMotion } from '@/lib/hooks/useReducedMotion';
 import type { Project } from '@/lib/types';
 
+// Three.js + WebGL is heavy (~200KB JS, GPU compositing). Skip it
+// entirely for users who prefer reduced motion; the rest of the hero
+// still renders, just without the 3D carousel.
 const ProjectCarousel3D = dynamic(
   () => import('@/components/three/ProjectCarousel3D').then((m) => m.ProjectCarousel3D),
   { ssr: false, loading: () => null },
@@ -58,6 +62,7 @@ const CATEGORY_ACCENT: Record<string, string> = {
 };
 
 export function HeroEnhanced({ projects = [] }: { projects?: Project[] }) {
+  const reducedMotion = useReducedMotion();
   const carouselProjects = projects.slice(0, 4).map((p) => ({
     slug: p.slug,
     title: p.title,
@@ -66,8 +71,25 @@ export function HeroEnhanced({ projects = [] }: { projects?: Project[] }) {
     accent: CATEGORY_ACCENT[p.category] || '#38BDF8',
   }));
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {carouselProjects.length > 0 && <ProjectCarousel3D projects={carouselProjects} />}
+    <section
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+      aria-labelledby="hero-heading"
+    >
+      {/* 3D carousel — decorative; skip on reduced motion, expose a
+          sr-only list of featured projects so screen readers get the
+          same information. */}
+      {carouselProjects.length > 0 && !reducedMotion && (
+        <ProjectCarousel3D projects={carouselProjects} />
+      )}
+      {carouselProjects.length > 0 && (
+        <ul className="sr-only">
+          {carouselProjects.map((p) => (
+            <li key={p.slug}>
+              <Link href={`/projects/${p.slug}`}>{p.title}</Link> — {p.category}
+            </li>
+          ))}
+        </ul>
+      )}
       <GlowingOrbs />
 
       {/* Enhanced vignette with gradient */}
@@ -158,7 +180,7 @@ export function HeroEnhanced({ projects = [] }: { projects?: Project[] }) {
 
           {/* Main heading with gradient text */}
           <motion.div variants={itemVariants} className="max-w-4xl">
-            <h1 className="heading-1 text-balance">
+            <h1 id="hero-heading" className="heading-1 text-balance">
               <motion.span
                 className="block text-white"
                 initial={{ opacity: 0, y: 20 }}

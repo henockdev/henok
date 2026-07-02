@@ -164,8 +164,16 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body>
         <ThemeProvider>
+          {/* Skip link — first focusable element. Hidden until
+              focused via keyboard, then jumps screen-reader and
+              keyboard users past the nav to the main content. */}
+          <a href="#main" className="skip-link">
+            Skip to main content
+          </a>
           <Navigation />
-          <main id="main">{children}</main>
+          <main id="main" tabIndex={-1}>
+            {children}
+          </main>
           <Footer />
           <AIAssistantWidget />
           <CommandPalette index={searchIndex as IndexItem[]} />

@@ -7,8 +7,7 @@ import { Achievements } from '@/components/sections/Achievements';
 import { GithubStats } from '@/components/sections/GithubStats';
 import { ContactSection } from '@/components/sections/Contact';
 import { BlogPreview } from '@/components/blog/BlogPreview';
-import { DemoBooth } from '@/components/sections/DemoBooth';
-import { AIDemoSection } from '@/components/sections/AIDemoSection';
+import { HeavySections } from '@/components/HeavySections';
 import { store } from '@/lib/data/store';
 import { fetchGitHubSummary } from '@/lib/data/github';
 
@@ -41,11 +40,8 @@ export default async function HomePage() {
       {/* Enhanced Skills Dashboard with 3D effects and progress animations */}
       <SkillsDashboardEnhanced skills={skills} />
 
-      {/* LIVE DEMO BOOTH — embedded Neural (full interactive product) */}
-      <DemoBooth />
-
-      {/* AI Assistant — "Try my AI" hero feature */}
-      <AIDemoSection />
+      {/* Lazy-loaded DemoBooth + AI Demo (heavy / below-the-fold) */}
+      <HeavySections />
 
       {/* Enhanced Projects Showcase with search, filters, and hover effects */}
       <ProjectsShowcase projects={publishedProjects} />
